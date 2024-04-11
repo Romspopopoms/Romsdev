@@ -49,3 +49,18 @@
     @apply w-full h-[180px] p-6 capitalize rounded-lg resize-none;
   }
 }
+
+/* Ajoutez ces styles dans votre fichier CSS global ou un fichier CSS spécifique pour ce composant */
+.slick-slide {
+  padding: 0 10px; /* Ajoute un padding de 10px sur les côtés de chaque slide */
+}
+
+.service-slide-icon:hover {
+  transform: rotate(45deg); /* Rotation de l'icône sans changement de position */
+}
+
+.service-slider-container .slick-slider {
+  padding: 0 20px; /* Ajoute un padding pour empêcher le chevauchement des flèches */
+  margin: 0 20px; /* Ajoute une marge entre les slides */
+
+}
