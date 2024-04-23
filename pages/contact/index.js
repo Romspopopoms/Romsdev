@@ -18,6 +18,7 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
+    alert('Submit!');
     e.preventDefault();
     try {
       // Envoie du formulaire à l'API
