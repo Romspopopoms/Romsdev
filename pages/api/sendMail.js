@@ -13,8 +13,8 @@ const sendMail = async (req, res) => {
     port: 587,
     secure: false, // true pour 465, false pour d'autres ports
     auth: {
-      user: `devprosyl@gmail.com`,
-      pass: `W^Nm7j$adM^oNz` // Utilisez un mot de passe d'application généré
+      user: `531517254891-7lggc7c7i65f3b92qhlcvdrbot6nhk41.apps.googleusercontent.com`,
+      pass: `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` // Utilisez un mot de passe d'application généré
     }
   });
 
