@@ -18,9 +18,11 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
+    alert('Submit!');
     e.preventDefault();
     try {
       // Envoie du formulaire à l'API
+      alert('Envoi du message!');
       const response = await axios.post('/api/sendMail', formData);
       alert('Message envoyé avec succès!');
       console.log('Server Response:', response.data);
