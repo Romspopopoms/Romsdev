@@ -21,8 +21,7 @@ const Home = () => {
           initial='hidden'
           animate='show'
           exit='hidden'
-          className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16">Comment faire un lorem ?
-Comme le fait dans word, comment générer du texte aléatoire dans Writer. Générer du texte aléatoire je ne sais pas, mais pour générer 3 paragraphes de texte latin Lorem ipsum dolor sit amet, etc., taper lorem puis la touche de fonction F3 . Ceci insère AutoTexte dont le code est lorem .</motion.p>
+          className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16">Je transforme vos idées en solutions digitales. En tant que développeur indépendant, je crée des sites web et applications sur mesure qui répondent précisément à vos besoins.</motion.p>
         <div className="flex justify-center xl:hidden relative"> 
           <ProjectsBtn />
         </div>

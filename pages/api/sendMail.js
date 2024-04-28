@@ -3,35 +3,39 @@ import nodemailer from 'nodemailer';
 
 const sendMail = async (req, res) => {
   if (req.method !== 'POST') {
-    return res.status(405).send({ message: 'Only POST requests allowed' });
+    return res.status(405).json({ message: 'Only POST requests allowed' });
   }
 
   const { name, email, message } = req.body;
 
+  if (!name || !email || !message) {
+    return res.status(400).json({ error: 'All fields are required' });
+  }
+
   const transporter = nodemailer.createTransport({
     host: 'smtp.mail.me.com',
     port: 587,
-    secure: false, // true pour 465, false pour d'autres ports
+    secure: false, // Utilisez `true` pour le port 465, `false` pour d'autres ports
     auth: {
-      user: process.env.ICLOUD_EMAIL,
-      pass: process.env.ICLOUD_APP_PASSWORD // Utilisez un mot de passe d'application généré
+      user: process.env.ICLOUD_EMAIL, // Utilisez votre adresse iCloud
+      pass: process.env.ICLOUD_APP_PASSWORD // Mot de passe d'application pour l'authentification
     }
   });
 
   const mailOptions = {
-    from: `"Formulaire de Contact" <${process.env.ICLOUD_EMAIL}>`,
-    to: process.env.RECIPIENT_EMAIL, // Définissez cette variable dans vos variables d'environnement
-    subject: `Nouveau message de ${name}`,
-    text: message,
-    html: `<p><strong>Nom:</strong> ${name} <br><strong>Email:</strong> ${email} <br><strong>Message:</strong> ${message}</p>`
+    from: `"Formulaire de Contact" <${process.env.ICLOUD_EMAIL}>`, // Adresse de l'expéditeur
+    to: process.env.ICLOUD_EMAIL, // Adresse du destinataire, identique à l'expéditeur
+    subject: `Nouveau message de ${name}`, // Sujet du mail
+    text: message, // Version texte du message
+    html: `<p><strong>Nom:</strong> ${name} <br><strong>Email:</strong> ${email} <br><strong>Message:</strong> ${message}</p>` // Version HTML du message
   };
 
   try {
     await transporter.sendMail(mailOptions);
-    res.status(200).json({ message: 'Email envoyé avec succès!' });
+    res.status(200).json({ message: 'Email sent successfully!' });
   } catch (error) {
-    console.error('Erreur lors de l\'envoi de l\'email:', error);
-    res.status(500).json({ error: 'Erreur lors de l\'envoi de l\'email' });
+    console.error('Error sending email:', error);
+    res.status(500).json({ error: 'Error sending email', details: error.message });
   }
 };
 

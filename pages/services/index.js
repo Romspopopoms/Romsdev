@@ -21,8 +21,7 @@ const Services = () => {
           variants={fadeInVariant}>
           <h2 className="text-2xl md:text-4xl font-bold mt-10">Mes Services <span className="text-accent">.</span></h2>
           <p className="mt-4 max-w-[400px] mx-auto xl:mx-0">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Sed efficitur velit vel.
-          </p>
+          Je propose des services personnalisés en branding, design et développement web, adaptés à chaque client.          </p>
         </motion.div>
         <motion.div className="w-full xl:max-w-[65%]" variants={fadeInVariant}>
           <ServiceSlider />

@@ -1,26 +1,33 @@
+// pages/_app.js
 import '../styles/globals.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import Layout from '../components/Layout';
 import Transition from '../components/Transition';
-
+import { AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
 
-import { AnimatePresence, motion } from 'framer-motion';
-
 function MyApp({ Component, pageProps }) {
-  const router = useRouter()
+  const router = useRouter();
+
+  // SEO par défaut pour toutes les pages, modifiable par pageProps si nécessaire
+  const defaultSeo = {
+    pageTitle: "RomsDev' Portfolio",
+    pageDescription: "Je transforme vos idées en solutions digitales. En tant que développeur indépendant, je crée des sites web et applications sur mesure qui répondent précisément à vos besoins.",
+    imageUrl: "/Romsdev.png",
+    pageUrl: 'https://romsdev-iota.vercel.app/'
+  };
+
   return (
-    <Layout>
+    <Layout {...defaultSeo}>
       <AnimatePresence mode='wait'>
-        <motion div key={router.route} className='h-full'>
+        <div key={router.route} className='h-full'>
           <Transition />
           <Component {...pageProps} />
-        </motion>
+        </div>
       </AnimatePresence>
     </Layout>
-  )
+  );
 }
 
 export default MyApp;

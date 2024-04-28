@@ -1,20 +1,18 @@
 // Exemple de structure de données pour les projets
 import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
-import { SiMongodb } from "react-icons/si";
-
+import { SiMongodb, SiTailwindcss } from "react-icons/si";
 export const projectsData = [
   {
     id: 1,
-    title: "Projet 1",
-    image: "/thumb1.jpg", // Chemin vers l'image du projet
-    description: "Une brève description du projet 1.",
-    link: "https://lien-vers-le-projet1.com",
-    frameworks: ["React", "Node.js", "MongoDB"],
+    title: "Enchante'Voix",
+    image: "/EnchanteVoix.png", // Chemin vers l'image du projet
+    description: "Site Vitrine, Cours de chant.",
+    link: "https://enchante-voix.vercel.app/",
+    frameworks: ["React", "Tailwindcss"],
     icon: [
       <FaReact key="react1" />, 
-      <FaNodeJs key="node1" />, 
-      <SiMongodb key="mongodb1" />
+      <SiTailwindcss key="tailwindcss1" />
     ]
   },
   {

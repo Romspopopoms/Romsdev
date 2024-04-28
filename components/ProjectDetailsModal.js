@@ -21,13 +21,14 @@ const ProjectDetailsModal = ({ project, onClose }) => {
           <div className='md:w-1/2'>
             <ul className="flex justify-center items-center flex-wrap">
               {project.frameworks.map((framework, index) => (
-                <li key={index} className="text-red-500 flex items-center m-2">
+                <li key={index} className="text-red-500 flex items-center m-2 ">
                   {project.icon[index]}
                   <span className="ml-2 text-white">{framework}</span>
                 </li>
               ))}
             </ul>
-            <p className='text-center text-white'>{project.description}</p>
+            <br></br>
+            <p className='text-center text-white mb-4 xl:mb-0'>{project.description}</p>
           </div>
           <Image 
             src={project.image} 

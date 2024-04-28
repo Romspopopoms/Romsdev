@@ -31,11 +31,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="container mx-auto p-8">
-      <h2 className="text-4xl text-center font-bold mb-8">Contactez-nous</h2>
+    <div className="container mx-auto mt-16 xl:mt-0 p-12 xl:p-40">
+      <h2 className="text-4xl text-center font-bold mt-4 ">Contactez-moi <span className='text-accent'>!</span></h2>
       <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label htmlFor="name" className="block text-lg font-medium mb-1">Nom :</label>
+        <div className="my-2 xl:my-8">
+          <label htmlFor="name" className="block text-lg font-medium mb-1">Nom <span className='text-accent'>:</span></label>
           <input
             type="text"
             id="name"
@@ -43,11 +43,11 @@ const Contact = () => {
             required
             value={formData.name}
             onChange={handleChange}
-            className="w-full border-2 p-2"
+            className="w-full border-2 p-2 text-black rounded-lg"
           />
         </div>
-        <div className="mb-4">
-          <label htmlFor="email" className="block text-lg font-medium mb-1">Email :</label>
+        <div className="my-2 xl:my-8">
+          <label htmlFor="email" className="block text-lg font-medium mb-1">Email <span className='text-accent'>:</span></label>
           <input
             type="email"
             id="email"
@@ -55,11 +55,11 @@ const Contact = () => {
             required
             value={formData.email}
             onChange={handleChange}
-            className="w-full border-2 p-2"
+            className="w-full border-2 p-2 text-black rounded-lg"
           />
         </div>
-        <div className="mb-4">
-          <label htmlFor="message" className="block text-lg font-medium mb-1">Message :</label>
+        <div className="my-2 xl:my-8">
+          <label htmlFor="message" className="block text-lg font-medium mb-1">Message <span className='text-accent'>:</span></label>
           <textarea
             id="message"
             name="message"
@@ -67,11 +67,11 @@ const Contact = () => {
             rows="4"
             value={formData.message}
             onChange={handleChange}
-            className="w-full border-2 p-2"
+            className="w-full border-2 p-2 text-black rounded-lg"
           />
         </div>
-        <div className="text-center">
-          <button type="submit" className="bg-blue-500 text-white font-bold py-2 px-4 rounded">
+        <div className="text-center my-2 xl:my-8">
+          <button type="submit" className="bg-accent text-white hover:text-accent hover:bg-white font-bold py-2 px-4 rounded">
             Envoyer
           </button>
         </div>

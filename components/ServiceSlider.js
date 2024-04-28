@@ -16,27 +16,22 @@ export const serviceData = [
   {
     icon: <RxCrop />,
     title: 'Branding',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: "Je crée une identité de marque unique et mémorable qui capte l'essence de votre entreprise.",
   },
   {
     icon: <RxPencil2 />,
     title: 'Design',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Je transforme vos idées en designs visuellement captivants, pour le web et le print.',
   },
   {
     icon: <RxDesktop />,
-    title: 'Development',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    icon: <RxReader />,
-    title: 'Copywriting',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'Developpement',
+    description: 'Je développe des sites web sur-mesure, optimisés pour performance et adaptabilité.',
   },
   {
     icon: <RxRocket />,
     title: 'SEO',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: "J'optimise votre présence en ligne pour améliorer votre visibilité sur les moteurs de recherche"
   },
 ];
 
@@ -76,7 +71,7 @@ const ServiceSlider = () => {
   };
 
   return (
-    <div className="service-slider-container">
+    <div className="p-4 xl:p-0">
       <Slider {...settings}>
         {serviceData.map((item, index) => (
           <div key={index} className="bg-[rgba(65,47,123,0.15)] h-full rounded-lg px-6 py-8 flex flex-col justify-between gap-y-4 cursor-pointer shadow-lg transition-shadow duration-300 hover:shadow-xl">

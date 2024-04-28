@@ -67,7 +67,9 @@ const InnovativeProjects = () => {
         className="mt-4 xl:mt-8 max-w-[400px] mx-auto text-center"
         variants={listItem}
       >
-        Loremsdkpqsldù dlsqù ldqsùdozp lùqsdml qmld mqsld qldpq^lz
+        Voici un aperçu de mes projets clés, chacun démontrant une approche unique et efficace pour répondre aux besoins spécifiques de mes clients.
+
+
       </motion.p>
 
       <motion.div 

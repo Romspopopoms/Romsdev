@@ -19,19 +19,6 @@ const aboutData = [
       },
     ],
   },
-  {
-    title: 'Awards',
-    info: [
-      {
-        title: 'Webby Awards - Honoree',
-        stage: '2011 - 2012',
-      },
-      {
-        title: 'Adobe Design Achievement Awards - Finalist',
-        stage: '2009 - 2010',
-      },
-    ],
-  },
 ];
 
 import Avatar from "../../components/Avatar";
