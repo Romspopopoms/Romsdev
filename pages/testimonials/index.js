@@ -53,7 +53,7 @@ const settings = {
 
 const Testimonials = () => {
   return (
-    <motion.div className="min-h-screen bg-primary/30 py-24 xl:py-12 px-4 flex flex-col items-center justify-center"
+    <motion.div className="min-h-screen bg-primary/30 py-8 xl:py-12 px-4 flex flex-col items-center justify-center"
       initial="hidden"
       animate="visible"
       variants={fadeInVariant}>

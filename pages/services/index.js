@@ -32,7 +32,7 @@ const Services = () => {
     };
   }, []);
   return (
-    <motion.div className="h-full bg-primary/30 pt-12 flex flex-col items-center justify-center"
+    <motion.div className="h-full bg-primary/30 pt-12 flex flex-col items-center justify-center mt-20 xl:mt-4"
       initial="hidden"
       animate="visible"
       variants={fadeInVariant}

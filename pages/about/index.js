@@ -50,10 +50,10 @@ const About = () => {
   }, []);
 
   return (
-    <div className="h-full bg-primary/30 py-32 text-center xl:text-left"
+    <div className="h-full bg-primary/30 py-24 xl:py-40 text-center xl:text-left"
     ref={contentRef} style={{ overflowY: 'auto' }}>
       <Circles />
-      <motion.div variants={fadeIn('right, 0.2')} initial="hidden" animate="show" exit="hidden" className="hidden xl:flex absolute bottom-0 -left-[370px]">
+      <motion.div variants={fadeIn('right, 0.2')} initial="hidden" animate="show" exit="hidden" className="hidden xl:flex absolute bottom-0 -left-[370px] ">
         <Avatar />
       </motion.div>
       <div className="container mx-auto h-full flex flex-col items-center mr-20 xl:flex-row gap-x-6">
@@ -66,7 +66,7 @@ const About = () => {
           </motion.p>
           {/* Metrics */}
         </div>
-        <motion.div variants={fadeIn('left', 0.6)} initial="hidden" animate="show" exit="hidden" className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
+        <motion.div variants={fadeIn('left', 0.6)} initial="hidden" animate="show" exit="hidden" className="flex flex-col w-full xl:max-w-[48%] h-auto xl:h-[480px]py-32 ">
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemIndex) => (
               <div key={item.title} className={`${index === itemIndex ? "text-accent after:w-[100px] after:bg-accent after:transition-all after:duration-300" : ""} cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`} onClick={() => setIndex(itemIndex)}>
@@ -76,7 +76,7 @@ const About = () => {
           </div>
           <div className="py-2 xl:py-6 flex flex-col gap-y-4 items-center xl:items-start">
             {aboutData[index].info.map((infoItem, infoIndex) => (
-              <div key={infoIndex} className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 gap-y-3 items-center text-white/60">
+              <div key={infoIndex} className="flex-1 flex md:flex-row max-w-max gap-x-2 gap-y-3 items-center text-white/60">
                 <div className="font-light mb-2 md:mb-0 gap-2">{infoItem.title}</div>
                 <div>{infoItem.stage}</div>
                 {infoItem.icons?.map(icon => (
@@ -87,6 +87,7 @@ const About = () => {
               </div>
             ))}
           </div>
+          <div className="h-24 w-full xl:hidden"></div>
         </motion.div>
       </div>
     </div>

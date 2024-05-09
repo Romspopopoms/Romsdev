@@ -79,7 +79,7 @@ const InnovativeProjects = () => {
       <Circles />
 
       <motion.h2 
-        className="text-2xl md:text-4xl font-bold mt-10 text-center"
+        className="text-2xl md:text-4xl font-bold mt-4 text-center"
         variants={listItem}
       >
         Projets Innovants <span className="text-accent">.</span>
