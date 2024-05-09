@@ -17,15 +17,16 @@ export const projectsData = [
   },
   {
     id: 2,
-    title: "Projet 2",
-    image: "/thumb2.jpg",
-    description: "Une brève description du projet 2.",
-    link: "https://lien-vers-le-projet2.com",
-    frameworks: ["React", "Node.js", "MongoDB"],
+    title: "Patronage D'Allauch",
+    image: "/Patro.png",
+    description: "Site complet, envoi de mail + API instagram .",
+    link: "http://patronage-allauch.vercel.app",
+    frameworks: ["React", "Tailwindcss", "Node.js",],
     icon: [
       <FaReact key="react2" />, 
+      <SiTailwindcss key="tailwindcss1" />,
       <FaNodeJs key="node2" />, 
-      <SiMongodb key="mongodb2" />
+      
     ]
   },
   {

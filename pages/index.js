@@ -1,4 +1,4 @@
-import Image from "next/image";
+import {React, useEffect, useRef} from "react"
 import ParticlesContainer from '../components/ParticlesContainer'
 import ProjectsBtn from '../components/ProjectsBtn'
 import Avatar from '../components/Avatar'
@@ -7,14 +7,35 @@ import { fadeIn } from "../variants"
 
 
 const Home = () => {
-  return <div className="bg-primary/60 h-full">
+  const contentRef = useRef(null);
+
+  // Utilisez useEffect pour détecter le changement de taille de la fenêtre et ajuster la hauteur de la div de contenu
+  useEffect(() => {
+    const handleResize = () => {
+      if (contentRef.current) {
+        contentRef.current.style.height = `${window.innerHeight}px`;
+      }
+    };
+
+    // Appelez handleResize au chargement initial et à chaque changement de taille de fenêtre
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    // Nettoyez l'écouteur d'événement lors du démontage du composant
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  return <div className="bg-primary/60 h-full"
+  ref={contentRef} style={{ overflowY: 'auto' }}>
     <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to to-black/10">
       <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
         <motion.h1 variants={fadeIn('down', 0.3)}
           initial='hidden'
           animate='show'
           exit='hidden'
-          className="h1">          Transformer Vos Idées <br />
+          className="h1 mt-64">          Transformer Vos Idées <br />
           <span className="text-accent"> En Réalité Digitale</span>
         </motion.h1>
         <motion.p variants={fadeIn('down', 0.3)}

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-
-// Icons
+import { useEffect, useRef } from 'react';
 import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma } from "react-icons/fa";
 import { SiNextdotjs, SiFramer } from "react-icons/si";
 
@@ -30,8 +29,29 @@ import CountUp from "react-countup";
 const About = () => {
   const [index, setIndex] = useState(0);
 
+  const contentRef = useRef(null);
+
+  // Utilisez useEffect pour détecter le changement de taille de la fenêtre et ajuster la hauteur de la div de contenu
+  useEffect(() => {
+    const handleResize = () => {
+      if (contentRef.current) {
+        contentRef.current.style.height = `${window.innerHeight}px`;
+      }
+    };
+
+    // Appelez handleResize au chargement initial et à chaque changement de taille de fenêtre
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    // Nettoyez l'écouteur d'événement lors du démontage du composant
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
-    <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
+    <div className="h-full bg-primary/30 py-32 text-center xl:text-left"
+    ref={contentRef} style={{ overflowY: 'auto' }}>
       <Circles />
       <motion.div variants={fadeIn('right, 0.2')} initial="hidden" animate="show" exit="hidden" className="hidden xl:flex absolute bottom-0 -left-[370px]">
         <Avatar />

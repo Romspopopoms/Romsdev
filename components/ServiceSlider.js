@@ -71,7 +71,7 @@ const ServiceSlider = () => {
   };
 
   return (
-    <div className="p-4 xl:p-0">
+    <div className="px-4 mb-24 xl:mb-0 xl:p-0">
       <Slider {...settings}>
         {serviceData.map((item, index) => (
           <div key={index} className="bg-[rgba(65,47,123,0.15)] h-full rounded-lg px-6 py-8 flex flex-col justify-between gap-y-4 cursor-pointer shadow-lg transition-shadow duration-300 hover:shadow-xl">

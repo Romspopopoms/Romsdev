@@ -9,7 +9,6 @@ import { useRouter } from 'next/router';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-
   // SEO par défaut pour toutes les pages, modifiable par pageProps si nécessaire
   const defaultSeo = {
     pageTitle: "RomsDev' Portfolio",

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { projectsData } from '../../components/ProjectData';
 import ProjectDetailsModal from '../../components/ProjectDetailsModal';
@@ -22,6 +22,7 @@ const listContainer = {
     },
   },
 };
+
 
 const ProjectItem = ({ project, onClick }) => {
   return (
@@ -47,12 +48,33 @@ const ProjectItem = ({ project, onClick }) => {
 const InnovativeProjects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
+  const contentRef = useRef(null);
+
+  // Utilisez useEffect pour détecter le changement de taille de la fenêtre et ajuster la hauteur de la div de contenu
+  useEffect(() => {
+    const handleResize = () => {
+      if (contentRef.current) {
+        contentRef.current.style.height = `${window.innerHeight}px`;
+      }
+    };
+
+    // Appelez handleResize au chargement initial et à chaque changement de taille de fenêtre
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    // Nettoyez l'écouteur d'événement lors du démontage du composant
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <motion.div 
       initial="hidden"
       animate="visible"
       variants={listContainer}
       className="container mx-auto px-4 py-24"
+      ref={contentRef} style={{ overflowY: 'auto' }}
     >
       <Circles />
 
