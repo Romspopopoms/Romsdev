@@ -18,7 +18,7 @@ export const projectsData = [
   {
     id: 2,
     title: "Patronage D'Allauch",
-    image: "/Patro.png",
+    image: "/PATRO.png",
     description: "Site complet, envoi de mail + API instagram .",
     link: "http://patronage-allauch.vercel.app",
     frameworks: ["React", "Tailwindcss", "Node.js",],
