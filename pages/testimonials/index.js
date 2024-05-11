@@ -26,14 +26,14 @@ const testimonialsList = [
     name: "Bob Dupont",
     role: "Directeur Marketing chez MarketIn",
     comment: "Une équipe réactive et professionnelle qui a su écouter nos besoins et les transcrire parfaitement sur notre plateforme en ligne.",
-    avatar: "/t-avt-2.png",
+    avatar: "/t-avt-3.png",
   },
   {
     id: 3,
     name: "Carla Lemoine",
     role: "Fondatrice de StartInnov",
     comment: "Nous avons été impressionnés par la qualité du code et le respect des délais. Un partenaire de développement web en or !",
-    avatar: "/t-avt-3.png",
+    avatar: "/t-avt-2.png",
   },
   // Ajoutez d'autres témoignages au besoin...
 ];
