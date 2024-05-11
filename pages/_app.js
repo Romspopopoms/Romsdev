@@ -1,7 +1,7 @@
 import '../styles/globals.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import Layout from '../components/Layout';
 import Transition from '../components/Transition';
 import { AnimatePresence } from 'framer-motion';
