@@ -12,11 +12,13 @@ const sora = Sora({
 });
 
 const Layout = ({ children, pageTitle, pageDescription, imageUrl, pageUrl }) => {
+  // Inclure les mots-clés dans le titre de la page
   const fullTitle = `${pageTitle} | Développement Web | Création de site internet | RomsDev' Portfolio`;
 
   return (
     <div className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}>
       <Head>
+        {/* Utiliser le titre avec les mots-clés */}
         <title>{fullTitle}</title>
         <meta name="description" content={pageDescription} />
         <meta name="keywords" content="développement web, création de site web" />
