@@ -1,10 +1,12 @@
 import '../styles/globals.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import React, {useState} from "react"
 import Layout from '../components/Layout';
 import Transition from '../components/Transition';
 import { AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
+
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -36,4 +38,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default MyApp;
