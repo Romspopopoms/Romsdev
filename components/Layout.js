@@ -13,7 +13,7 @@ const sora = Sora({
 
 const Layout = ({ children, pageTitle, pageDescription, imageUrl, pageUrl }) => {
   // Construction dynamique du titre de la page pour inclure les mots-clés
-  const fullTitle = `${pageTitle} | Développement Web | Création de site internet | RomsDev' Portfolio`;
+  const fullTitle = `${pageTitle} | developpement web | création de site web | RomsDev' Portfolio`;
 
   return (
     <div className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}>
