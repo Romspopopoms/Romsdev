@@ -32,7 +32,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="container mx-auto mt-16 xl:mt-0 p-12 xl:p-40">
+    <div className="container mx-auto mt-8 xl:mt-0 p-12 xl:p-40">
       <h2 className="text-4xl text-center font-bold mt-4 ">Contactez-moi <span className='text-accent'>!</span></h2>
       <form onSubmit={handleSubmit}>
         <div className="my-2 xl:my-8">

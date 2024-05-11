@@ -33,7 +33,7 @@ export const projectsData = [
   {
     id: 3,
     title: "CRM Scan'Avis",
-    image: "/thumb3.jpg",
+    image: "/CRM.png",
     description: "Un CRM complet, pour permettre une visibilité rapide des données de l'entreprise",
     frameworks: ["React", "Tailwind", "Node.js", "Vercel"],
     icon: [
@@ -45,15 +45,16 @@ export const projectsData = [
   },
   {
     id: 4,
-    title: "Projet 4",
-    image: "/thumb4.jpg",
-    description: "Une brève description du projet 4.",
+    title: "Site 'blog' pour un lycée spé mécanique",
+    image: "/Sitebidoux.png",
+    description: "Différentes pages proposant des cours avec vidéos, images, et textes.",
     link: "https://lien-vers-le-projet4.com",
-    frameworks: ["React", "Node.js", "MongoDB"],
+    frameworks: ["React", "Tailwind", "Node.js", "Vercel"],
     icon: [
-      <FaReact key="react4" />, 
-      <FaNodeJs key="node4" />, 
-      <SiMongodb key="mongodb4" />
+      <FaReact key="react3" />, 
+      <SiTailwindcss key="tailwindcss1" />,
+      <FaNodeJs key="node3" />, 
+      <SiVercel key="vercel3" />
     ]
   },
   // Ajoutez d'autres projets selon le même modèle
