@@ -15,7 +15,7 @@ const Layout = ({ children, pageTitle, pageDescription, imageUrl, pageUrl }) => 
   return (
     <div className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}>
       <Head>
-        <title>{pageTitle}</title> {/* Modification du méta titre */}
+        <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
@@ -25,6 +25,9 @@ const Layout = ({ children, pageTitle, pageDescription, imageUrl, pageUrl }) => 
         <meta name="google-site-verification" content="vW2uqRP0SI2mzRBW4TWIt9et5K4b81k-zzFJyANVKGw" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href={pageUrl} />
+        {/* Ajouter les mots-clés dans le méta titre */}
+        <title>{pageTitle}</title>
+        <meta name="keywords" content="développement web, création de site web" />
         {/* Ajouter d'autres métadonnées si nécessaire */}
       </Head>
       <TopLeftImg />
