@@ -6,9 +6,9 @@ const transporter = nodemailer.createTransport({
   auth: {
     type: 'OAuth2',
     user: 'masaintebible.fr@gmail.com',
-    clientId: process.env.GMAIL_CLIENT_ID,
-    clientSecret: process.env.GMAIL_CLIENT_SECRET,
-    refreshToken: process.env.GMAIL_REFRESH_TOKEN,
+    clientId: process.env.GMAIL_CLIENT_ID || "69415188575-dk09nb3b2togcqefnm3pfk9e8sges5um.apps.googleusercontent.com",
+    clientSecret: process.env.GMAIL_CLIENT_SECRET || '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',
+    refreshToken: process.env.GMAIL_REFRESH_TOKEN || '1//03dGGuBVB2Gs-CgYIARAAGAMSNwF-L9IrYhNw2KWiaxjpqF0foCrRAGJeFfU5mpoHfdm_nZKUIHY0k4zcb0VsZVVlaNxI9CB18-o',
   }
 });
 
