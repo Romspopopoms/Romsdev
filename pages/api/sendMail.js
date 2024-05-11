@@ -1,44 +1,54 @@
-// pages/api/sendMail.js
 import nodemailer from 'nodemailer';
 
-const sendMail = async (req, res) => {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Only POST requests allowed' });
+// Configuration de transporter pour l'authentification OAuth2 avec Nodemailer
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    type: 'OAuth2',
+    user: 'masaintebible.fr@gmail.com',
+    clientId: process.env.GMAIL_CLIENT_ID,
+    clientSecret: process.env.GMAIL_CLIENT_SECRET,
+    refreshToken: process.env.GMAIL_REFRESH_TOKEN,
   }
+});
 
-  const { name, email, message } = req.body;
-
-  if (!name || !email || !message) {
-    return res.status(400).json({ error: 'All fields are required' });
-  }
-
-  // Supprimez les lignes ci-dessous si vous ne voulez pas les utiliser
-  const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 587,
-    secure: false, // Utilisez `true` pour le port 465, `false` pour d'autres ports
-    auth: {
-      user: process.env.ICLOUD_EMAIL, // Utilisez votre adresse iCloud
-      pass: process.env.ICLOUD_APP_PASSWORD // Mot de passe d'application pour l'authentification
-    }
-  });
-
-  // Vous devrez résoudre les conflits dans les options de courrier aussi.
+// Fonction pour envoyer un email avec les informations du formulaire au propriétaire
+async function sendEmail(formData) {
+  const { name, email, message } = formData;
   const mailOptions = {
-    from: `"Formulaire de Contact" <${process.env.ICLOUD_EMAIL}>`, // Adresse de l'expéditeur
-    to: process.env.ICLOUD_EMAIL, // Adresse du destinataire, identique à l'expéditeur
-    subject: `Nouveau message de ${name}`, // Sujet du mail
-    text: message, // Version texte du message
-    html: `<p><strong>Nom:</strong> ${name} <br><strong>Email:</strong> ${email} <br><strong>Message:</strong> ${message}</p>` // Version HTML du message
+    from: 'masaintebible.fr@gmail.com',
+    to: 'contact@romsdev.fr',
+    subject: 'Nouveau message du formulaire de contact',
+    text: `
+      Vous avez reçu un message de 
+      ${name}
+      Message : ${message}
+
+      N'hésitez pas à recontacter cette personne via cette adresse-mail --> ${email}
+    `
   };
 
   try {
     await transporter.sendMail(mailOptions);
-    res.status(200).json({ message: 'Email sent successfully!' });
+    return 'Email sent successfully';
   } catch (error) {
     console.error('Error sending email:', error);
-    res.status(500).json({ error: 'Error sending email', details: error.message });
+    throw error;
   }
-};
+}
 
-export default sendMail;
+// Handler pour les requêtes HTTP à cet endpoint
+async function emailHandler(req, res) {
+  if (req.method === 'POST') {
+    try {
+      const result = await sendEmail(req.body);
+      res.status(200).send({ message: result });
+    } catch (error) {
+      res.status(500).send({ error: 'Failed to send email', details: error.message });
+    }
+  } else {
+    res.status(405).send({ error: 'Method not allowed' });
+  }
+}
+
+export default emailHandler;

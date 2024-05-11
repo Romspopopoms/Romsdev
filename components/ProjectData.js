@@ -1,7 +1,8 @@
 // Exemple de structure de données pour les projets
 import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
-import { SiMongodb, SiTailwindcss } from "react-icons/si";
+import { SiMongodb, SiTailwindcss, SiVercel } from "react-icons/si";
+
 export const projectsData = [
   {
     id: 1,
@@ -31,15 +32,15 @@ export const projectsData = [
   },
   {
     id: 3,
-    title: "Projet 3",
+    title: "CRM Scan'Avis",
     image: "/thumb3.jpg",
-    description: "Une brève description du projet 3.",
-    link: "https://lien-vers-le-projet3.com",
-    frameworks: ["React", "Node.js", "MongoDB"],
+    description: "Un CRM complet, pour permettre une visibilité rapide des données de l'entreprise",
+    frameworks: ["React", "Tailwind", "Node.js", "Vercel"],
     icon: [
       <FaReact key="react3" />, 
+      <SiTailwindcss key="tailwindcss1" />,
       <FaNodeJs key="node3" />, 
-      <SiMongodb key="mongodb3" />
+      <SiVercel key="vercel3" />
     ]
   },
   {

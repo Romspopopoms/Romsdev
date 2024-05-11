@@ -1,4 +1,3 @@
-// pages/Contact.js
 import React, { useState } from 'react';
 import axios from 'axios';
 
@@ -9,6 +8,8 @@ const Contact = () => {
     message: ''
   });
 
+  const [submitStatus, setSubmitStatus] = useState(''); // Pour gérer l'état de l'envoi
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
@@ -18,17 +19,15 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
-    alert('Submit!');
     e.preventDefault();
+    setSubmitStatus('Envoi du message...'); // Informer l'utilisateur que l'envoi est en cours
     try {
       // Envoie du formulaire à l'API
-      alert('Envoi du message!');
       const response = await axios.post('/api/sendMail', formData);
-      alert('Message envoyé avec succès!');
-      console.log('Server Response:', response.data);
+      setSubmitStatus('Message envoyé avec succès!'); // Message de succès
     } catch (error) {
       console.error('Erreur lors de l’envoi du message:', error);
-      alert('Erreur lors de l’envoi du message.');
+      setSubmitStatus('Erreur lors de l’envoi du message.'); // Message d'erreur
     }
   };
 
@@ -77,6 +76,7 @@ const Contact = () => {
             Envoyer
           </button>
         </div>
+        {submitStatus && <div className="text-center mt-4 text-lg">{submitStatus}</div>} {/* Affichage du statut d'envoi */}
       </form>
     </div>
   );

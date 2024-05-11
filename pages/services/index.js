@@ -41,7 +41,7 @@ const Services = () => {
       <div className="container mx-auto flex flex-col xl:flex-row justify-center items-center gap-x-8 gap-y-4">
         <motion.div className="text-center xl:text-left xl:w-[30vw] mb-4 xl:mb-0"
           variants={fadeInVariant}>
-          <h2 className="text-2xl md:text-4xl font-bold">Mes Services <span className="text-accent">.</span></h2>
+          <h2 className="text-2xl xl:text-4xl font-bold mt-24">Mes Services <span className="text-accent">.</span></h2>
           <p className="mt-4 max-w-[400px] mx-auto xl:mx-0">
           Je propose des services personnalisés en branding, design et développement web, adaptés à chaque client.          </p>
         </motion.div>

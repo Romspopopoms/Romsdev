@@ -6,19 +6,24 @@ import Layout from '../components/Layout';
 import Transition from '../components/Transition';
 import { AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
+import Head from 'next/head'; // Import du composant Head
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+
   // SEO par défaut pour toutes les pages, modifiable par pageProps si nécessaire
   const defaultSeo = {
     pageTitle: "RomsDev' Portfolio",
     pageDescription: "Je transforme vos idées en solutions digitales. En tant que développeur indépendant, je crée des sites web et applications sur mesure qui répondent précisément à vos besoins.",
     imageUrl: "/Romsdev.png",
-    pageUrl: 'https://romsdev-iota.vercel.app/'
+    pageUrl: 'https://romsdev.fr'
   };
 
   return (
     <Layout {...defaultSeo}>
+      <Head>
+        <link rel="icon" href="/ROMSDEVLOGO.ico" /> {/* Lien vers le favicon */}
+      </Head>
       <AnimatePresence mode='wait'>
         <div key={router.route} className='h-full'>
           <Transition />
