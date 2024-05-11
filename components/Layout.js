@@ -13,10 +13,9 @@ const sora = Sora({
 
 const Layout = ({ children, pageTitle, pageDescription, imageUrl, pageUrl }) => {
   return (
-   
     <div className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}>
       <Head>
-        <title>{pageTitle}</title>
+        <title>{pageTitle}</title> {/* Modification du méta titre */}
         <meta name="description" content={pageDescription} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />

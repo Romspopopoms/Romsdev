@@ -21,10 +21,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <Layout {...defaultSeo}> 
-      <Head>
-        <title>Développement Web | Création de site internet | RomsDev&apos; Portfolio</title> {/* Modification du méta titre */}
-        <link rel="icon" href="/ROMSDEVLOGO.ico" /> {/* Lien vers le favicon */}
-      </Head>
+      {/* Pas besoin de modifier le titre ici car il est déjà géré dans le composant Layout */}
       <AnimatePresence mode='wait'>
         <div key={router.route} className='h-full'>
           <Transition />
@@ -34,6 +31,5 @@ function MyApp({ Component, pageProps }) {
     </Layout>
   );
 }
-
 
 export default MyApp;
