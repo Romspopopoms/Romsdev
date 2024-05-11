@@ -27,7 +27,7 @@ const Layout = ({ children, pageTitle, pageDescription, imageUrl, pageUrl }) => 
         <meta property="og:url" content={pageUrl} />
         <meta property="og:type" content="website" />
         <meta name="google-site-verification" content="vW2uqRP0SI2mzRBW4TWIt9et5K4b81k-zzFJyANVKGw" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/ROMSDEVLOGO.ico" />
         <link rel="canonical" href={pageUrl} />
       </Head>
       <TopLeftImg />

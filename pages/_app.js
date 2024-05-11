@@ -1,4 +1,3 @@
-// pages/_app.js
 import '../styles/globals.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -6,22 +5,27 @@ import Layout from '../components/Layout';
 import Transition from '../components/Transition';
 import { AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
-import Head from 'next/head'; // Import du composant Head
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
-  // SEO par défaut pour toutes les pages, modifiable par pageProps si nécessaire
-  const defaultSeo = {
-    pageTitle: "Développement Web | Création de site internet | RomsDev&apos; Portfolio",
+  // Vous pouvez également envisager de définir un état pour gérer le SEO
+  const [seo, setSeo] = useState({
+    pageTitle: "Développement Web | Création de site internet | RomsDev' Portfolio",
     pageDescription: "Je transforme vos idées en solutions digitales. En tant que développeur indépendant, je crée des sites web et applications sur mesure qui répondent précisément à vos besoins.",
     imageUrl: "/Romsdev.png",
     pageUrl: 'https://romsdev.fr'
-  };
+  });
+
+  // Mettre à jour le SEO si pageProps contient des informations spécifiques à la page
+  useEffect(() => {
+    if (pageProps.seo) {
+      setSeo({...seo, ...pageProps.seo});
+    }
+  }, [pageProps.seo]);
 
   return (
-    <Layout {...defaultSeo}> 
-      {/* Pas besoin de modifier le titre ici car il est déjà géré dans le composant Layout */}
+    <Layout {...seo}>
       <AnimatePresence mode='wait'>
         <div key={router.route} className='h-full'>
           <Transition />
@@ -32,4 +36,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default MyApp;
