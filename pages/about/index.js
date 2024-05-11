@@ -66,7 +66,7 @@ const About = () => {
           </motion.p>
           {/* Metrics */}
         </div>
-        <motion.div variants={fadeIn('left', 0.6)} initial="hidden" animate="show" exit="hidden" className="flex flex-col w-full xl:max-w-[48%] h-auto xl:h-[480px] py-32 ">
+        <motion.div variants={fadeIn('left', 0.6)} initial="hidden" animate="show" exit="hidden" className="flex flex-col w-full xl:max-w-[48%] h-auto xl:h-[480px] py-8 xl:py-32 ">
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemIndex) => (
               <div key={item.title} className={`${index === itemIndex ? "text-accent after:w-[100px] after:bg-accent after:transition-all after:duration-300" : ""} cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`} onClick={() => setIndex(itemIndex)}>
