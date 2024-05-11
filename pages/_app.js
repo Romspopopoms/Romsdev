@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
 
   // SEO par défaut pour toutes les pages, modifiable par pageProps si nécessaire
   const defaultSeo = {
-    pageTitle: "RomsDev' Portfolio",
+    pageTitle: "Développement Web | Création de site internet | RomsDev' Portfolio",
     pageDescription: "Je transforme vos idées en solutions digitales. En tant que développeur indépendant, je crée des sites web et applications sur mesure qui répondent précisément à vos besoins.",
     imageUrl: "/Romsdev.png",
     pageUrl: 'https://romsdev.fr'
@@ -22,6 +22,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <Layout {...defaultSeo}>
       <Head>
+        <title>Développement Web | Création de site internet | RomsDev' Portfolio</title> {/* Modification du méta titre */}
         <link rel="icon" href="/ROMSDEVLOGO.ico" /> {/* Lien vers le favicon */}
       </Head>
       <AnimatePresence mode='wait'>
@@ -33,5 +34,3 @@ function MyApp({ Component, pageProps }) {
     </Layout>
   );
 }
-
-export default MyApp;
