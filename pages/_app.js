@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
   };
 
   return (
-    <Layout {...defaultSeo}>
+    <Layout {...defaultSeo}> 
       <Head>
         <title>Développement Web | Création de site internet | RomsDev' Portfolio</title> {/* Modification du méta titre */}
         <link rel="icon" href="/ROMSDEVLOGO.ico" /> {/* Lien vers le favicon */}
