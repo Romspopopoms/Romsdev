@@ -2,6 +2,7 @@ import '../styles/globals.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React, { useState, useEffect } from "react";
+import Head from 'next/head';
 import Layout from '../components/Layout';
 import Transition from '../components/Transition';
 import { AnimatePresence } from 'framer-motion';
@@ -41,6 +42,22 @@ function MyApp({ Component, pageProps }) {
       setSeo(defaultSeo);
     }
   }, [pageProps.seo]);
+
+  // Fonction pour raccourcir la balise titre si nécessaire
+  const shortenTitle = (title) => {
+    if (title.length > 70) {
+      return title.slice(0, 70) + "...";
+    }
+    return title;
+  };
+
+  // Fonction pour raccourcir la méta-description si nécessaire
+  const shortenDescription = (description) => {
+    if (description.length > 160) {
+      return description.slice(0, 160) + "...";
+    }
+    return description;
+  };
 
   return (
     <Layout {...seo}>
