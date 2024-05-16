@@ -11,26 +11,13 @@ import { useRouter } from 'next/router';
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
-  // Liste des mots-clés pour chaque page
-  const keywords = {
-    '/': ['développement web', 'création de site web'],
-    '/creation-de-sites-sur-mesure': ['création de sites sur mesure'],
-    '/creation-de-boutiques-en-ligne': ['création de boutiques en ligne'],
-    '/maintenance-de-sites-web': ['maintenance de sites web'],
-    '/agence-web': ['agence web'],
-    '/developpement-backend': ['développement backend'],
-    '/conception-ux-ui': ['conception ux/ui'],
-    '/developpement-ecommerce': ['développement e-commerce'],
-    '/refonte-de-site-internet': ['refonte de site internet'],
-    '/freelance-developpeur-web': ['freelance développeur web']
-  };
-
   // État pour gérer le SEO dynamique
   const [seo, setSeo] = useState({
     pageTitle: "Développement Web | Création de site internet | RomsDev' Portfolio",
     pageDescription: "Je transforme vos idées en solutions digitales. En tant que développeur indépendant, je crée des sites web et applications sur mesure qui répondent précisément à vos besoins.",
     imageUrl: "/Romsdev.png",
-    pageUrl: 'https://romsdev.fr'
+    pageUrl: 'https://romsdev.fr',
+    keywords: [] // Ajoutez un état pour stocker les mots-clés de la page actuelle
   });
 
   // Mettre à jour le SEO si pageProps contient des informations spécifiques à la page
@@ -40,8 +27,8 @@ function MyApp({ Component, pageProps }) {
     }
   }, [pageProps.seo]);
 
-  // Récupérer les mots-clés de la page actuelle
-  const currentPageKeywords = keywords[router.pathname] || [];
+  // Récupérer les mots-clés de la page actuelle à partir de la route
+  const currentPageKeywords = seo.keywords || [];
 
   return (
     <Layout {...seo} keywords={currentPageKeywords}>
