@@ -43,24 +43,8 @@ function MyApp({ Component, pageProps }) {
     }
   }, [pageProps.seo]);
 
-  // Fonction pour raccourcir la balise titre si nécessaire
-  const shortenTitle = (title) => {
-    if (title.length > 70) {
-      return title.slice(0, 70) + "...";
-    }
-    return title;
-  };
-
-  // Fonction pour raccourcir la méta-description si nécessaire
-  const shortenDescription = (description) => {
-    if (description.length > 160) {
-      return description.slice(0, 160) + "...";
-    }
-    return description;
-  };
-
   return (
-    <Layout {...seo}>
+    <Layout seo={seo}>
       <AnimatePresence mode='wait'>
         <div key={router.route} className='h-full'>
           <Transition />
@@ -71,4 +55,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default MyApp;
