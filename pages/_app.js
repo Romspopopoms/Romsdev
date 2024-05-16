@@ -2,7 +2,6 @@ import '../styles/globals.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React, { useState, useEffect } from "react";
-import Head from 'next/head';
 import Layout from '../components/Layout';
 import Transition from '../components/Transition';
 import { AnimatePresence } from 'framer-motion';
@@ -44,7 +43,7 @@ function MyApp({ Component, pageProps }) {
   }, [pageProps.seo]);
 
   return (
-    <Layout seo={seo}>
+    <Layout {...seo}>
       <AnimatePresence mode='wait'>
         <div key={router.route} className='h-full'>
           <Transition />
@@ -55,4 +54,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default MyApp;
