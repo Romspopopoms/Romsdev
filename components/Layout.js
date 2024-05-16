@@ -11,16 +11,16 @@ const sora = Sora({
   weights: ['100', '200', '300', '400', '500', '600', '700', '800']
 });
 
-const Layout = ({ children, pageTitle, pageDescription, imageUrl, pageUrl }) => {
+const Layout = ({ children, pageTitle, pageDescription, imageUrl, pageUrl, keywords }) => {
   // Construction dynamique du titre de la page pour inclure les mots-clés
-  const fullTitle = `${pageTitle} | developpement web | création de site web | RomsDev' Portfolio`;
+  const fullTitle = `${pageTitle} | ${keywords.join(', ')} | RomsDev' Portfolio`;
 
   return (
     <div className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}>
       <Head>
         <title>{fullTitle}</title>
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="développement web, création de site web" />
+        <meta name="keywords" content={keywords.join(', ')} />
         <meta property="og:title" content={fullTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:image" content={imageUrl} />
@@ -38,4 +38,4 @@ const Layout = ({ children, pageTitle, pageDescription, imageUrl, pageUrl }) => 
   );
 };
 
-export default Layout;
+export default Layout;
