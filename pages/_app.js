@@ -17,7 +17,21 @@ function MyApp({ Component, pageProps }) {
     pageDescription: "Je transforme vos idées en solutions digitales. En tant que développeur indépendant, je crée des sites web et applications sur mesure qui répondent précisément à vos besoins.",
     imageUrl: "/Romsdev.png",
     pageUrl: 'https://romsdev.fr',
-    keywords: [] // Ajoutez un état pour stocker les mots-clés de la page actuelle
+    keywords: [
+      "création de sites sur mesure",
+      "création de boutiques en ligne",
+      "maintenance de sites web",
+      "agence web",
+      "développement backend",
+      "conception ux/ui",
+      "développement e-commerce",
+      "refonte de site internet",
+      "freelance développeur web",
+      "création de sites sur mesure La Ciotat",
+      "création de boutiques en ligne Marseille",
+      "maintenance de sites web Bouches-du-Rhône",
+      "agence web Provence-Alpes-Côte d'Azur"
+    ]
   });
 
   // Mettre à jour le SEO si pageProps contient des informations spécifiques à la page
