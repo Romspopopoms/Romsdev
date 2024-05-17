@@ -6,13 +6,14 @@ import Layout from '../components/Layout';
 import Transition from '../components/Transition';
 import { AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   const defaultSeo = {
-    pageTitle: "Développement Web | RomsDev' Portfolio",
-    pageDescription: "Développeur indépendant créant des sites web et applications sur mesure.",
+    pageTitle: "Développement Web | RomsDev'",
+    pageDescription: "Développeur indépendant créant des sites web sur mesure à La Ciotat et Marseille.",
     imageUrl: "/Romsdev.png",
     pageUrl: 'https://romsdev.fr',
     keywords: [
@@ -44,6 +45,12 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <Layout {...seo}>
+      <Head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        <html lang="fr" />
+      </Head>
       <AnimatePresence mode='wait'>
         <div key={router.route} className='h-full'>
           <Transition />
@@ -54,4 +61,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default MyApp;
