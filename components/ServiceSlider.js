@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import { RxCrop, RxPencil2, RxDesktop, RxReader, RxRocket, RxArrowTopRight } from "react-icons/rx";
+import { RxCrop, RxPencil2, RxDesktop, RxRocket, RxArrowTopRight } from "react-icons/rx";
 
 // Data
 export const serviceData = [
@@ -68,12 +68,12 @@ const ServiceSlider = () => {
             <div className="text-4xl text-accent mb-4">
               {item.icon}
             </div>
-            <div>
+            <div className="flex-grow">
               <div className="mb-2 text-lg font-bold">{item.title}</div>
               <p className="leading-normal">{item.description}</p>
             </div>
-            <div className="text-3xl mt-auto">
-              <RxArrowTopRight className="mt-4 service-slide-icon transition-transform duration-300 hover:text-accent" />
+            <div className="text-3xl mt-4">
+              <RxArrowTopRight className="service-slide-icon transition-transform duration-300 hover:text-accent" />
             </div>
           </div>
         ))}

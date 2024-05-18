@@ -66,12 +66,17 @@
 }
 
 /* Add this CSS to ensure all slides have the same height */
+/* Add this CSS to ensure all slides have the same height */
 .service-slide {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
+.service-slide .flex-grow {
+  flex-grow: 1;
+}
+
 
 
 /* Custom CSS to hide the scrollbar */
