@@ -3,6 +3,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React, { useState, useEffect } from "react";
 import Layout from '../components/Layout';
+import Transition from '../components/Transition';
+import { AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 
@@ -47,12 +49,15 @@ function MyApp({ Component, pageProps }) {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
-        <link rel="icon" href="/ROMSDEVLOGO.ico" />
+        <link rel="icon" href="/favicon.ico" />
         <title>{seo.pageTitle}</title>
       </Head>
-      <div className='h-full'>
-        <Component {...pageProps} />
-      </div>
+      <AnimatePresence mode='wait'>
+        <div key={router.route} className='h-full'>
+          <Transition />
+          <Component {...pageProps} />
+        </div>
+      </AnimatePresence>
     </Layout>
   );
 }
