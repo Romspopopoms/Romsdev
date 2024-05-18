@@ -5,7 +5,7 @@ import Circles from "../../components/Circles";
 import { motion } from "framer-motion";
 import Head from 'next/head';
 
-// Supposons que FadeIn est un objet contenant vos variantes d'animation
+// Supposons que fadeInVariant est un objet contenant vos variantes d'animation
 const fadeInVariant = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { duration: 2 } },
@@ -35,9 +35,9 @@ const Services = () => {
   return (
     <>
       <Head>
-        <title>Services | RomsDev' Portfolio</title>
+        <title>Services | RomsDev&apos; Portfolio</title>
         <meta name="description" content="Je propose des services personnalisés en branding, design et développement web, adaptés à chaque client." />
-        <meta name="keywords" content="services web, branding, design, développement web, services personnalisés, RomsDev, La Ciotat, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur" />
+        <meta name="keywords" content="services web, branding, design, développement web, services personnalisés, RomsDev, La Ciotat, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d&apos;Azur" />
         <link rel="canonical" href="https://romsdev.fr/services" />
       </Head>
       <motion.div
@@ -74,4 +74,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Services;

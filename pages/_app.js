@@ -37,11 +37,11 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     if (pageProps.seo) {
-      setSeo({...defaultSeo, ...pageProps.seo});
+      setSeo({ ...defaultSeo, ...pageProps.seo });
     } else {
       setSeo(defaultSeo);
     }
-  }, [pageProps.seo]);
+  }, [pageProps.seo, defaultSeo]); // Ajout de defaultSeo comme dépendance
 
   return (
     <Layout {...seo}>

@@ -67,9 +67,9 @@ const InnovativeProjects = () => {
   return (
     <>
       <Head>
-        <title>Projets Innovants | RomsDev' Portfolio</title>
+        <title>Projets Innovants | RomsDev&apos; Portfolio</title>
         <meta name="description" content="Découvrez mes projets innovants en développement web, chaque projet démontrant une approche unique et efficace pour répondre aux besoins spécifiques de mes clients." />
-        <meta name="keywords" content="projets innovants, développement web, portfolio, RomsDev, La Ciotat, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur" />
+        <meta name="keywords" content="projets innovants, développement web, portfolio, RomsDev, La Ciotat, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d&apos;Azur" />
         <link rel="canonical" href="https://romsdev.fr/work" />
       </Head>
       <motion.div 

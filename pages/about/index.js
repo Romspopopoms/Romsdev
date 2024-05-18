@@ -49,7 +49,7 @@ const About = () => {
   return (
     <>
       <Head>
-        <title>À Propos | RomsDev' Portfolio</title>
+        <title>À Propos | RomsDev&apos; Portfolio</title>
         <meta name="description" content="Développeur web autodidacte, mon portfolio met en avant mes compétences techniques à travers une sélection de projets." />
         <meta name="keywords" content="développement web, design UI/UX, HTML, CSS, JavaScript, React, Next.js, Framer, Figma, portfolio, projets web, développeur indépendant, La Ciotat, Marseille" />
         <link rel="canonical" href="https://romsdev.fr/about" />

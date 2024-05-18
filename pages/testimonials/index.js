@@ -54,9 +54,9 @@ const Testimonials = () => {
   return (
     <>
       <Head>
-        <title>Témoignages | RomsDev' Portfolio</title>
+        <title>Témoignages | RomsDev&apos; Portfolio</title>
         <meta name="description" content="Découvrez les témoignages de nos clients satisfaits de nos services de développement web et design." />
-        <meta name="keywords" content="témoignages clients, satisfaction clients, développement web, design, RomsDev, La Ciotat, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur" />
+        <meta name="keywords" content="témoignages clients, satisfaction clients, développement web, design, RomsDev, La Ciotat, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d&apos;Azur" />
         <link rel="canonical" href="https://romsdev.fr/testimonials" />
       </Head>
       <motion.div
@@ -86,7 +86,7 @@ const Testimonials = () => {
                     objectFit="cover"
                   />
                   <p className="text-xl font-semibold mt-4">{testimonial.name}</p>
-                  <p className="text-md my-4">{"${testimonial.comment}"}</p>
+                  <p className="text-md my-4">{testimonial.comment}</p>
                   <p className="text-sm uppercase">{testimonial.role}</p>
                 </div>
               </motion.div>
@@ -99,4 +99,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default Testimonials;
