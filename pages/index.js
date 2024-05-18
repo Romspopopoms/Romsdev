@@ -9,7 +9,6 @@ import Head from 'next/head';
 const Home = () => {
   const contentRef = useRef(null);
 
-  // Utilisez useEffect pour détecter le changement de taille de la fenêtre et ajuster la hauteur de la div de contenu
   useEffect(() => {
     const handleResize = () => {
       if (contentRef.current) {
@@ -17,11 +16,9 @@ const Home = () => {
       }
     };
 
-    // Appelez handleResize au chargement initial et à chaque changement de taille de fenêtre
     handleResize();
     window.addEventListener('resize', handleResize);
 
-    // Nettoyez l'écouteur d'événement lors du démontage du composant
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -57,7 +54,7 @@ const Home = () => {
             >
               Je transforme vos idées en solutions digitales. En tant que développeur indépendant, je crée des sites web et applications sur mesure qui répondent précisément à vos besoins.
             </motion.p>
-            <div className="flex justify-center xl:hidden relative">
+            <div className="flex justify-center xl:hidden relative z-10">
               <ProjectsBtn />
             </div>
             <motion.div
@@ -65,7 +62,7 @@ const Home = () => {
               initial='hidden'
               animate='show'
               exit='hidden'
-              className="hidden xl:flex"
+              className="hidden xl:flex relative z-10"
             >
               <ProjectsBtn />
             </motion.div>
@@ -81,7 +78,7 @@ const Home = () => {
             animate='show'
             exit='hidden'
             transition={{ duration: 1, ease: "easeInOut" }}
-            className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]"
+            className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%] z-10"
           >
             <Avatar />
             <div className="w-full h-48"></div>
