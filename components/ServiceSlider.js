@@ -70,9 +70,9 @@ const ServiceSlider = () => {
             </div>
             <div>
               <div className="mb-2 text-lg font-bold">{item.title}</div>
-              <p className="max-w-[350px] leading-normal">{item.description}</p>
+              <p className="leading-normal">{item.description}</p>
             </div>
-            <div className="text-3xl">
+            <div className="text-3xl mt-auto">
               <RxArrowTopRight className="mt-4 service-slide-icon transition-transform duration-300 hover:text-accent" />
             </div>
           </div>
