@@ -3,8 +3,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React, { useState, useEffect } from "react";
 import Layout from '../components/Layout';
-import Transition from '../components/Transition';
-import { AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 
@@ -41,7 +39,7 @@ function MyApp({ Component, pageProps }) {
     } else {
       setSeo(defaultSeo);
     }
-  }, [pageProps.seo, defaultSeo]); // Ajout de defaultSeo comme dépendance
+  }, [pageProps.seo]);
 
   return (
     <Layout {...seo}>
@@ -52,12 +50,9 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/ROMSDEVLOGO.ico" />
         <title>{seo.pageTitle}</title>
       </Head>
-      <AnimatePresence mode='wait'>
-        <div key={router.route} className='h-full'>
-          <Transition />
-          <Component {...pageProps} />
-        </div>
-      </AnimatePresence>
+      <div className='h-full'>
+        <Component {...pageProps} />
+      </div>
     </Layout>
   );
 }
