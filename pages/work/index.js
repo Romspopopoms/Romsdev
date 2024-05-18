@@ -49,7 +49,6 @@ const InnovativeProjects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const contentRef = useRef(null);
 
-  // Utilisez useEffect pour détecter le changement de taille de la fenêtre et ajuster la hauteur de la div de contenu
   useEffect(() => {
     const handleResize = () => {
       if (contentRef.current) {
@@ -57,11 +56,9 @@ const InnovativeProjects = () => {
       }
     };
 
-    // Appelez handleResize au chargement initial et à chaque changement de taille de fenêtre
     handleResize();
     window.addEventListener('resize', handleResize);
 
-    // Nettoyez l'écouteur d'événement lors du démontage du composant
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -79,7 +76,7 @@ const InnovativeProjects = () => {
         initial="hidden"
         animate="visible"
         variants={listContainer}
-        className="container mx-auto px-4 py-24"
+        className="container mx-auto px-4 py-24 hide-scrollbar"
         ref={contentRef}
         style={{ overflowY: 'auto' }}
       >
