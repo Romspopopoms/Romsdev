@@ -49,8 +49,8 @@ function MyApp({ Component, pageProps }) {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
-        <html lang="fr" />
         <link rel="icon" href="/ROMSDEVLOGO.ico" />
+        <title>{seo.pageTitle}</title>
       </Head>
       <AnimatePresence mode='wait'>
         <div key={router.route} className='h-full'>
@@ -62,4 +62,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default MyApp;
