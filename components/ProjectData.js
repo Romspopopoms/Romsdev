@@ -1,7 +1,7 @@
 // Exemple de structure de données pour les projets
 import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
-import { SiMongodb, SiTailwindcss, SiVercel } from "react-icons/si";
+import { SiTailwindcss, SiVercel } from "react-icons/si";
 
 export const projectsData = [
   {
@@ -43,19 +43,4 @@ export const projectsData = [
       <SiVercel key="vercel3" />
     ]
   },
-  {
-    id: 4,
-    title: "Site 'blog' pour un lycée spé mécanique",
-    image: "/Sitebidoux.png",
-    description: "Différentes pages proposant des cours avec vidéos, images, et textes.",
-    link: "https://lien-vers-le-projet4.com",
-    frameworks: ["React", "Tailwind", "Node.js", "Vercel"],
-    icon: [
-      <FaReact key="react3" />, 
-      <SiTailwindcss key="tailwindcss1" />,
-      <FaNodeJs key="node3" />, 
-      <SiVercel key="vercel3" />
-    ]
-  },
-  // Ajoutez d'autres projets selon le même modèle
 ];
