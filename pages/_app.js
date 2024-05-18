@@ -50,6 +50,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
         <html lang="fr" />
+        <link rel="icon" href="/ROMSDEVLOGO.ico" />
       </Head>
       <AnimatePresence mode='wait'>
         <div key={router.route} className='h-full'>
