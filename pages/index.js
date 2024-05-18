@@ -35,7 +35,7 @@ const Home = () => {
         <meta name="keywords" content="création de sites sur mesure, création de boutiques en ligne, maintenance de sites web, agence web, développement backend, conception ux/ui, développement e-commerce, refonte de site internet, freelance développeur web, La Ciotat, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d&apos;Azur" />
         <link rel="canonical" href="https://romsdev.fr" />
       </Head>
-      <div className="bg-primary/60 h-full" ref={contentRef} style={{ overflowY: 'auto' }}>
+      <div className="bg-primary/60 h-full hide-scrollbar" ref={contentRef} style={{ overflowY: 'auto' }}>
         <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
           <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
             <motion.h1
