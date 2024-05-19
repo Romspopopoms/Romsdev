@@ -95,7 +95,7 @@ const InnovativeProjects = () => {
         </motion.p>
         <motion.div 
           variants={listContainer}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8"
         >
           {projectsData.map((project) => (
             <ProjectItem key={project.id} project={project} onClick={setSelectedProject} />
