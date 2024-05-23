@@ -54,7 +54,7 @@ const Services = () => {
             className="text-center xl:text-left xl:w-[30vw] mb-4 xl:mb-0"
             variants={fadeInVariant}
           >
-            <h2 className="text-2xl xl:text-4xl font-bold mt-24">
+            <h2 className="text-2xl xl:text-4xl font-bold mt-12 xl:mt-0">
               Mes Services <span className="text-accent">.</span>
             </h2>
             <p className="mt-4 max-w-[400px] mx-auto xl:mx-0">
