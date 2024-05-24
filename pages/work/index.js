@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Bulb from "../../components/Bulb";
 import Circles from "../../components/Circles";
 import Head from 'next/head';
+import Script from 'next/script';
 
 const imageWidth = 200; // Width of the image in pixels
 const imageHeight = 200; // Height of the image in pixels
@@ -72,6 +73,15 @@ const InnovativeProjects = () => {
         <meta name="keywords" content="projets innovants, développement web, portfolio, RomsDev, La Ciotat, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d&apos;Azur" />
         <link rel="canonical" href="https://romsdev.fr/work" />
       </Head>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-17C5QX19CG" strategy="afterInteractive"></Script>
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-17C5QX19CG');
+        `}
+      </Script>
       <motion.div 
         initial="hidden"
         animate="visible"

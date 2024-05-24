@@ -6,6 +6,7 @@ import Circles from "../../components/Circles";
 import Bulb from "../../components/Bulb";
 import Image from 'next/image';
 import Head from 'next/head';
+import Script from "next/script";
 
 const fadeInVariant = {
   hidden: { opacity: 0 },
@@ -59,6 +60,15 @@ const Testimonials = () => {
         <meta name="keywords" content="témoignages clients, satisfaction clients, développement web, design, RomsDev, La Ciotat, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d&apos;Azur" />
         <link rel="canonical" href="https://romsdev.fr/testimonials" />
       </Head>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-17C5QX19CG" strategy="afterInteractive"></Script>
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-17C5QX19CG');
+        `}
+      </Script>
       <motion.div
         className="min-h-screen bg-primary/30 py-8 xl:py-12 px-4 flex flex-col items-center justify-center"
         initial="hidden"

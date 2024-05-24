@@ -6,7 +6,7 @@ import Circles from "../../components/Circles";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
 import Head from 'next/head';
-
+import Script from "next/script";
 // Data
 const aboutData = [
   {
@@ -54,6 +54,15 @@ const About = () => {
         <meta name="keywords" content="développement web, design UI/UX, HTML, CSS, JavaScript, React, Next.js, Framer, Figma, portfolio, projets web, développeur indépendant, La Ciotat, Marseille" />
         <link rel="canonical" href="https://romsdev.fr/about" />
       </Head>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-17C5QX19CG" strategy="afterInteractive"></Script>
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-17C5QX19CG');
+        `}
+      </Script>
       <div className="h-full bg-primary/30 py-24 xl:py-40 text-center xl:text-left" ref={contentRef} style={{ overflowY: 'auto' }}>
         <Circles />
         <motion.div

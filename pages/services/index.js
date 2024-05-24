@@ -4,7 +4,7 @@ import Bulb from "../../components/Bulb";
 import Circles from "../../components/Circles";
 import { motion } from "framer-motion";
 import Head from 'next/head';
-
+import Script from 'next/script';
 // Supposons que fadeInVariant est un objet contenant vos variantes d'animation
 const fadeInVariant = {
   hidden: { opacity: 0 },
@@ -40,6 +40,15 @@ const Services = () => {
         <meta name="keywords" content="services web, branding, design, développement web, services personnalisés, RomsDev, La Ciotat, Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d&apos;Azur" />
         <link rel="canonical" href="https://romsdev.fr/services" />
       </Head>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-17C5QX19CG" strategy="afterInteractive"></Script>
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-17C5QX19CG');
+        `}
+      </Script>
       <motion.div
         className="h-full bg-primary/30 pt-12 flex flex-col items-center justify-center mt-20 xl:mt-4"
         initial="hidden"
