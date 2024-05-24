@@ -1,17 +1,18 @@
 import '../styles/globals.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Layout from '../components/Layout';
 import Transition from '../components/Transition';
 import { AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import Script from 'next/script';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
-  const defaultSeo = {
+  const defaultSeo = useMemo(() => ({
     pageTitle: "Développement Web | RomsDev'",
     pageDescription: "Développeur indépendant créant des sites web sur mesure à La Ciotat et Marseille.",
     imageUrl: "/Romsdev.png",
@@ -31,7 +32,7 @@ function MyApp({ Component, pageProps }) {
       "Bouches-du-Rhône",
       "Provence-Alpes-Côte d'Azur"
     ]
-  };
+  }), []);
 
   const [seo, setSeo] = useState(defaultSeo);
 
@@ -41,7 +42,7 @@ function MyApp({ Component, pageProps }) {
     } else {
       setSeo(defaultSeo);
     }
-  }, [pageProps.seo]);
+  }, [pageProps.seo, defaultSeo]);
 
   return (
     <Layout {...seo}>
@@ -52,6 +53,15 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
         <title>{seo.pageTitle}</title>
       </Head>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-17C5QX19CG" strategy="afterInteractive"></Script>
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-17C5QX19CG');
+        `}
+      </Script>
       <AnimatePresence mode='wait'>
         <div key={router.route} className='h-full'>
           <Transition />

@@ -6,7 +6,8 @@ import { FaReact } from "react-icons/fa";
 import { FaAngular } from "react-icons/fa";
 import Image from "next/image";
 import bg1 from "../public/bg-1.png"
-const SliderDev1 = () => {
+
+const SliderDev3 = () => {
     const [hovered, setHovered] = useState(false);
     
     return (
@@ -60,8 +61,8 @@ const SliderDev1 = () => {
                 </motion.div>
             {/* Ce div sera visible uniquement sur les écrans MD et XL */}
             <motion.div
-                className="hidden relative xl:flex justify-center items-center min-w-[60%] h-28 group px-8 "
-                whileHover={{ width: "70%" }}
+                className="hidden relative md:flex justify-center items-center min-w-[60%] h-36 group px-8 "
+                whileHover={{ width: "80%" }}
                 onHoverStart={() => setHovered(true)}
                 onHoverEnd={() => setHovered(false)}
             >
@@ -82,28 +83,28 @@ const SliderDev1 = () => {
                             animate={hovered ? { top: '25%', left: '80%', scale:1.2 } : { top: '25%', left: '12%' }}
                             transition={{duration: 0.6}}
                         >
-                            <FaVuejs className="size-10 text-green-600" />
+                            <FaVuejs className="size-12 text-green-600" />
                         </motion.div>
                         <motion.div
                             className="absolute top-[25%] left-[34%]"
                             animate={hovered ? { top: '25%', left: '58%', scale:1.2 } : { top: '25%', left: '34%' }}
                             transition={{duration: 0.6}}
                         >
-                            <FaReact className="size-10 text-blue-400" />
+                            <FaReact className="size-12 text-blue-400" />
                         </motion.div>
                         <motion.div
                             className="absolute top-[25%] left-[58%]"
                             animate={hovered ? { top: '25%', left: '34%', scale:1.2 } : { top: '25%', left: '58%' }}
                             transition={{duration: 0.6}}
                         >
-                            <FaAngular className="size-10 text-red-600" />
+                            <FaAngular className="size-12 text-red-600" />
                         </motion.div>
                         <motion.div
                             className="absolute top-[25%] left-[80%]"
                             animate={hovered ? { top: '25%', left: '12%', scale:1.2 } : { top: '25%', left: '80%' }}
                             transition={{duration: 0.6}}
                             >
-                            <SiNextdotjs className="size-10 text-black" />
+                            <SiNextdotjs className="size-12 text-black" />
                         </motion.div>
                     </div>
                 </motion.div>
@@ -112,4 +113,4 @@ const SliderDev1 = () => {
     );
 }
 
-export default SliderDev1;
+export default SliderDev3;
