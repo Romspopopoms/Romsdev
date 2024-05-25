@@ -1,6 +1,4 @@
-import { motion } from "framer-motion"
 import NavBlog from "../../components/NavBlog"
-import SliderBlog from "../../components/SliderBlog"
 
 const Blog = () => {
     return (
@@ -8,10 +6,7 @@ const Blog = () => {
             <aside>
                 <NavBlog />
             </aside>
-            <main>
-                <SliderBlog />
-            </main>
-
+            <h1 className="h1 text-center">Mon Blog<span className="text-accent">.</span></h1>
         </div>
 
     )
