@@ -2,7 +2,7 @@ import { RiYoutubeLine, RiInstagramLine, RiFacebookLine } from "react-icons/ri";
 
 const Socials = () => {
   return (
-    <div className="flex items-center gap-x-5 text-lg z-20">
+    <div className="flex items-center gap-x-5 text-lg z-30">
       <a href="https://www.youtube.com" className="hover:text-accent transition-all duration-300 z-30">
         <RiYoutubeLine />
       </a>
