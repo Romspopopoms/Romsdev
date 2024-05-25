@@ -5,13 +5,14 @@ import { FaVuejs } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 import { FaAngular } from "react-icons/fa";
 import Image from "next/image";
-import bg1 from "../public/bg-1.png"
+import bg1 from "../public/bg-1.png";
+
 const SliderDev1 = () => {
     const [hovered, setHovered] = useState(false);
     
     return (
         <div className="w-full h-full flex flex-col items-center">
-            <motion.div className="relative md:hidden min-w-[70%] h-20"
+            <motion.div className="relative lg:hidden min-w-[70%] h-20 "
             whileHover={{ width: "80%" }}
             onHoverStart={() => setHovered(true)}
             onHoverEnd={() => setHovered(false)}>
@@ -26,7 +27,7 @@ const SliderDev1 = () => {
                         F R A M E W O R K<span className="text-accent"> .</span> J S
                     </motion.h2>
                 
-                <div className="relative w-full h-12">
+                    <div className="relative w-full h-12">
                         <motion.div
                             className="absolute top-[10%] left-[12%]"
                             animate={hovered ? { top: '10%', left: '80%', scale:1.2 } : { top: '10%', left: '12%' }}
@@ -52,15 +53,15 @@ const SliderDev1 = () => {
                             className="absolute top-[10%] left-[80%]"
                             animate={hovered ? { top: '10%', left: '12%', scale:1.2 } : { top: '10%', left: '80%' }}
                             transition={{duration: 0.6}}
-                            >
+                        >
                             <SiNextdotjs className="size-8 text-black" />
                         </motion.div>
                     </div>
                 </motion.div>
-                </motion.div>
-            {/* Ce div sera visible uniquement sur les écrans MD et XL */}
+            </motion.div>
+            {/* Ce div sera visible uniquement sur les écrans LG et XL */}
             <motion.div
-                className="hidden relative xl:flex justify-center items-center min-w-[60%] h-28 group px-8 "
+                className="hidden relative lg:flex justify-center items-center min-w-[60%] h-28 group px-8 "
                 whileHover={{ width: "70%" }}
                 onHoverStart={() => setHovered(true)}
                 onHoverEnd={() => setHovered(false)}
@@ -76,7 +77,7 @@ const SliderDev1 = () => {
                         J A V A S C R I P T / F R A M E W O R K
                     </motion.h2>
                     
-                    <div className="hidden md:block relative w-full h-12">
+                    <div className="relative w-full h-12">
                         <motion.div
                             className="absolute top-[25%] left-[12%]"
                             animate={hovered ? { top: '25%', left: '80%', scale:1.2 } : { top: '25%', left: '12%' }}
@@ -102,7 +103,7 @@ const SliderDev1 = () => {
                             className="absolute top-[25%] left-[80%]"
                             animate={hovered ? { top: '25%', left: '12%', scale:1.2 } : { top: '25%', left: '80%' }}
                             transition={{duration: 0.6}}
-                            >
+                        >
                             <SiNextdotjs className="size-10 text-black" />
                         </motion.div>
                     </div>
