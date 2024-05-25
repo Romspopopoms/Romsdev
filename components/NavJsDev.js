@@ -53,10 +53,10 @@ const NavJsDev = () => {
 
       <div className="flex flex-col items-center">
         <button 
-          className="h-28 w-24 flex flex-col items-center justify-center place-self-center rounded-full shadow-lg bg-emerald-800 hover:scale-110 border-[#fffffd] border-4 z-10"
+          className="h-14 w-12 lg:h-28 lg:w-24 flex flex-col items-center justify-center place-self-center rounded-full shadow-lg bg-emerald-800 hover:scale-110 border-[#fffffd] border-4 z-10"
           onClick={() => handleButtonClick('Vue')}>
-          <FaVuejs className="size-12 text-[#fffffd]" />
-          <div className="text-[#fffffd] text-xl">VueJs</div>
+          <FaVuejs className="lg:size-12 size-6 text-[#fffffd]" />
+          <div className="text-[#fffffd] lg:text-xl">VueJs</div>
         </button>
         {isVueVisible ? (
           <div className="flex justify-center items-center mt-2">
@@ -67,10 +67,10 @@ const NavJsDev = () => {
 
       <div className="flex flex-col items-center">
         <button 
-          className="h-28 w-24 flex flex-col items-center justify-center place-self-center rounded-full shadow-lg bg-red-500 hover:scale-110 border-[#fffffd] border-4 z-10"
+          className="h-14 w-12 lg:h-28 lg:w-24 flex flex-col items-center justify-center place-self-center rounded-full shadow-lg bg-red-500 hover:scale-110 border-[#fffffd] border-4 z-10"
           onClick={() => handleButtonClick('Angular')}>
-          <FaAngular className="size-12 text-[#fffffd]" />
-          <div className="text-[#fffffd] text-xl">Angular</div>
+          <FaAngular className="lg:size-12 size-6 text-[#fffffd]" />
+          <div className="text-[#fffffd] lg:text-xl">Angular</div>
         </button>
         {isAngularVisible ? (
           <div className="flex justify-center items-center mt-2">
@@ -81,10 +81,10 @@ const NavJsDev = () => {
 
       <div className="flex flex-col items-center">
         <button 
-          className="h-28 w-24 flex flex-col items-center justify-center place-self-center rounded-full shadow-lg bg-black hover:scale-110 border-[#fffffd] border-4 z-10"
+          className="h-14 w-12 lg:h-28 lg:w-24 flex flex-col items-center justify-center place-self-center rounded-full shadow-lg bg-black hover:scale-110 border-[#fffffd] border-4 z-10"
           onClick={() => handleButtonClick('Nextjs')}>
-          <SiNextdotjs className="size-12 text-[#fffffd]" />
-          <div className="text-[#fffffd] text-xl">NextJs</div>
+          <SiNextdotjs className="lg:size-12 size-6 text-[#fffffd]" />
+          <div className="text-[#fffffd] lg:text-xl">NextJs</div>
         </button>
         {isNextjsVisible ? (
           <div className="flex justify-center items-center mt-2">
