@@ -39,10 +39,10 @@ const NavJsDev = () => {
 
       <div className="flex flex-col items-center h-auto ">
         <button 
-          className="h-28 w-24 flex flex-col items-center justify-center place-self-center rounded-full shadow-lg bg-[#61DBFB] saturate-200 hover:scale-110 border-[#fffffd] border-4 z-10"
+          className=" h-14 w-12 lg:h-28 lg:w-24 flex flex-col items-center justify-center place-self-center rounded-full shadow-lg bg-[#61DBFB] saturate-200 hover:scale-110 border-[#fffffd] border-4 z-10"
           onClick={() => handleButtonClick('React')}>
-          <FaReact className="size-12 text-[#fffffd]" />
-          <div className="text-[#fffffd] text-xl">React</div>
+          <FaReact className="lg:size-12 size-6 text-[#fffffd]" />
+          <div className="text-[#fffffd] lg:text-xl">React</div>
         </button>
         {isReactVisible ? (
           <div className="flex justify-center items-center mt-2">
@@ -101,7 +101,7 @@ const NavJsDev = () => {
           exit="exit"
           variants={slideIn}
           transition={{ duration: 0.7, ease: "easeInOut" }}>
-          <div className="relative w-full xl:mt-0 lg:mt-12 mt-20 xl:max-w-[50%] max-w-[100%] ">
+          <div className="relative w-full xl:mt-0 lg:mt-12 mt-12 xl:max-w-[50%] max-w-[100%] ">
             <Link href="/blog/developpement/Js-framework/ReactTuto" 
             className="group block">
               <Image src={React_Banner} alt="Bannière React" width={width} height={height} className="object-cover bg-no-repeat z-0 group-hover:scale-110 rounded-md" />
