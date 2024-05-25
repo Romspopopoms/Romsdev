@@ -39,7 +39,7 @@ const NavJsDev = () => {
 
       <div className="flex flex-col items-center h-auto ">
         <button 
-          className=" h-14 w-12 lg:h-28 lg:w-24 flex flex-col items-center justify-center place-self-center rounded-full shadow-lg bg-[#61DBFB] saturate-200 hover:scale-110 border-[#fffffd] border-4 z-10 px-2 py-1 lg:px-0 lg:py-1"
+          className=" h-14 w-12 lg:h-28 lg:w-24 flex flex-col items-center justify-center place-self-center rounded-full shadow-lg bg-[#61DBFB] saturate-200 hover:scale-110 border-[#fffffd] border-4 z-10 p-8 lg:p-0"
           onClick={() => handleButtonClick('React')}>
           <FaReact className="lg:size-12 size-6 text-[#fffffd]" />
           <div className="text-[#fffffd] lg:text-xl">React</div>
@@ -53,7 +53,7 @@ const NavJsDev = () => {
 
       <div className="flex flex-col items-center">
         <button 
-          className="h-14 w-12 lg:h-28 lg:w-24 flex flex-col items-center justify-center place-self-center rounded-full shadow-lg bg-emerald-800 hover:scale-110 border-[#fffffd] border-4 z-10 px-2 py-1 lg:px-0 lg:py-1"
+          className="h-14 w-12 lg:h-28 lg:w-24 flex flex-col items-center justify-center place-self-center rounded-full shadow-lg bg-emerald-800 hover:scale-110 border-[#fffffd] border-4 z-10 p-8 lg:p-0"
           onClick={() => handleButtonClick('Vue')}>
           <FaVuejs className="lg:size-12 size-6 text-[#fffffd]" />
           <div className="text-[#fffffd] lg:text-xl">VueJs</div>
@@ -67,7 +67,7 @@ const NavJsDev = () => {
 
       <div className="flex flex-col items-center">
         <button 
-          className="h-14 w-12 lg:h-28 lg:w-24 flex flex-col items-center justify-center place-self-center rounded-full shadow-lg bg-red-500 hover:scale-110 border-[#fffffd] border-4 z-10 px-2 py-1 lg:px-0 lg:py-1"
+          className="h-14 w-12 lg:h-28 lg:w-24 flex flex-col items-center justify-center place-self-center rounded-full shadow-lg bg-red-500 hover:scale-110 border-[#fffffd] border-4 z-10 p-8 lg:p-0"
           onClick={() => handleButtonClick('Angular')}>
           <FaAngular className="lg:size-12 size-6 text-[#fffffd]" />
           <div className="text-[#fffffd] lg:text-xl">Angular</div>
@@ -81,7 +81,7 @@ const NavJsDev = () => {
 
       <div className="flex flex-col items-center">
         <button 
-          className="h-14 w-12 lg:h-28 lg:w-24 flex flex-col items-center justify-center place-self-center rounded-full shadow-lg bg-black hover:scale-110 border-[#fffffd] border-4 z-10 px-2 py-1 lg:px-0 lg:py-1"
+          className="h-14 w-12 lg:h-28 lg:w-24 flex flex-col items-center justify-center place-self-center rounded-full shadow-lg bg-black hover:scale-110 border-[#fffffd] border-4 z-10 p-8 lg:p-0"
           onClick={() => handleButtonClick('Nextjs')}>
           <SiNextdotjs className="lg:size-12 size-6 text-[#fffffd]" />
           <div className="text-[#fffffd] lg:text-xl">NextJs</div>
