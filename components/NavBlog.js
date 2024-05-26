@@ -5,7 +5,7 @@ import { FaArrowLeft, FaArrowRight, FaHome, FaCode, FaDatabase, FaShieldAlt, FaC
 import { motion } from "framer-motion";
 
 const NavBlog = () => {
-  const [OpenMenu, SetOpenMenu] = useState(true);
+  const [OpenMenu, SetOpenMenu] = useState(false);
   const menuRef = useRef();
 
   const handleClickOutside = (event) => {
