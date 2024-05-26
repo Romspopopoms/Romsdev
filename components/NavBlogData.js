@@ -1,16 +1,12 @@
 
 const NavBlogData = [
+  
   {
-    title: "Accueil",
-    description: "Découvrez mes dernières publications sur le développement web.",
-    url: "/blog"
-  },
-  {
-    title: "Développement",
+    title: "Dev'",
     description: "Articles sur les frameworks JavaScript, performance, accessibilité et responsive design.",
     url: "/blog/developpement",
     subNav: [
-      { title: "Frameworks JS", url: "/blog/developpement/frameworks" },
+      { title: "Frameworks JS", url: "/blog/developpement/Js-framework" },
       { title: "Performance", url: "/blog/developpement/performance" },
       { title: "Accessibilité", url: "/blog/developpement/accessibilite" },
       { title: "Responsive", url: "/blog/developpement/responsive-design" }
@@ -42,7 +38,7 @@ const NavBlogData = [
     url: "/blog/technologies-emergentes"
   },
   {
-    title: "Design et UX/UI",
+    title: "UX/UI",
     description: "Principes de design UX/UI, outils de prototypage et tests utilisateurs.",
     url: "/blog/design-ux-ui"
   },

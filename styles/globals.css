@@ -88,3 +88,13 @@
 .hide-scrollbar::-webkit-scrollbar {
   display: none;  /* Safari and Chrome */
 }
+
+.arrow-link {
+  position: fixed;
+}
+
+@media (min-width: 1280px) {
+  .arrow-link {
+    position: absolute;
+  }
+}

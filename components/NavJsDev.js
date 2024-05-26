@@ -1,26 +1,21 @@
 import React, { useState } from "react";
 import { FaAngular, FaArrowLeft, FaArrowUp, FaReact, FaVuejs } from "react-icons/fa";
 import { SiNextdotjs } from "react-icons/si";
-import Image from "next/image";
-import React_Banner from "../public/React_Banner.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const width = '50%';
-const height = '50%';
-
 const NavJsDev = () => {
-  const [isReactVisible, setIsReactVisible] = useState(true);
-  const [isVueVisible, setIsVueVisible] = useState(false);
-  const [isAngularVisible, setIsAngularVisible] = useState(false);
-  const [isNextjsVisible, setIsNextjsVisible] = useState(false);
-  const [isRedirected, setIsRedirected] = useState(false);
+  const [selectedFramework, setSelectedFramework] = useState('React');
+
+  const frameworks = [
+    { name: 'React', color: 'from-blue-500 to-blue-300', icon: <FaReact size={40} />, link: '/blog/developpement/Js-framework/ReactTuto' },
+    { name: 'Vue', color: 'from-green-500 to-green-300', icon: <FaVuejs size={40} />, link: '/blog/developpement/Js-framework/VueTuto' },
+    { name: 'Angular', color: 'from-red-500 to-red-300', icon: <FaAngular size={40} />, link: '/blog/developpement/Js-framework/AngularTuto' },
+    { name: 'Nextjs', color: 'from-gray-800 to-gray-600', icon: <SiNextdotjs size={40} />, link: '/blog/developpement/Js-framework/NextjsTuto' },
+  ];
 
   const handleButtonClick = (framework) => {
-    setIsReactVisible(framework === 'React');
-    setIsVueVisible(framework === 'Vue');
-    setIsAngularVisible(framework === 'Angular');
-    setIsNextjsVisible(framework === 'Nextjs');
+    setSelectedFramework(framework);
   };
 
   const slideIn = {
@@ -30,91 +25,78 @@ const NavJsDev = () => {
   };
 
   return (
-    <div className="flex flex-wrap items-center justify-center gap-2 md:gap-2 xxl:gap-16 p-4">
-      <Link href="/blog/developpement"
-        className="absolute top-20 xl:top-[20%] left-[90%] iph:left-[92%] md:left-[95%] lg:left-[96%] xl:left-[26%] h-auto w-full xl:w-auto bg-white/10 rounded-l-full xl:rounded-full p-2"
-        onClick={() => setIsRedirected(!isRedirected)}>
+    <div className="grid lg:grid-cols-3 gap-4 p-4 mt-16 max-w-7xl mx-auto">
+      <Link href="/blog/developpement" className="fixed top-20 left-[90%] iph:left-[92%] md:left-[95%] lg:left-[96%] lg:top-[3.6%] xl:top-[14.5%] xl:left-[97%] xxl:left-[98%] h-auto w-full xl:w-auto bg-white/10 rounded-l-full xl:rounded-full p-2">
         <FaArrowLeft className="size-6 hover:text-accent" />
       </Link>
 
-      <div className="flex flex-col items-center h-auto ">
-        <button 
-          className=" h-14 w-12 lg:h-28 lg:w-24 flex flex-col items-center justify-center place-self-center rounded-full shadow-lg bg-[#61DBFB] saturate-200 hover:scale-110 border-[#fffffd] border-4 z-10 p-8 lg:p-0"
-          onClick={() => handleButtonClick('React')}>
-          <FaReact className="lg:size-12 size-6 text-[#fffffd]" />
-          <div className="text-[#fffffd] lg:text-xl">React</div>
-        </button>
-        {isReactVisible ? (
-          <div className="flex justify-center items-center mt-2">
-            <FaArrowUp className="text-accent" />
+      <div className="flex flex-wrap items-center justify-center lg:grid lg:grid-cols-2 lg:gap-2 gap-2 md:gap-3 xl:gap-4 lg:col-span-1">
+        {frameworks.map(({ name, color, icon }, index) => (
+          <div key={index} className="flex flex-col items-center ">
+            <button
+              className={`h-20 w-20 lg:h-32 lg:w-32 flex flex-col items-center justify-center rounded-lg shadow-lg bg-gradient-to-r ${color} hover:scale-110 border-[#fffffd] border-4 z-10 p-4 lg:p-0`}
+              onClick={() => handleButtonClick(name)}
+            >
+              <motion.div whileHover={{ scale: 1.5, rotate: 360 }} transition={{ duration: 0.5 }}>
+                {icon}
+              </motion.div>
+              <div className="text-[#fffffd] lg:text-xl mt-2">{name}</div>
+            </button>
+            {selectedFramework === name && (
+              <div className="flex justify-center items-center mt-2">
+                <FaArrowUp className="text-accent" />
+              </div>
+            )}
           </div>
-        ) : null}
+        ))}
       </div>
 
-      <div className="flex flex-col items-center">
-        <button 
-          className="h-14 w-12 lg:h-28 lg:w-24 flex flex-col items-center justify-center place-self-center rounded-full shadow-lg bg-emerald-800 hover:scale-110 border-[#fffffd] border-4 z-10 p-8 lg:p-0"
-          onClick={() => handleButtonClick('Vue')}>
-          <FaVuejs className="lg:size-12 size-6 text-[#fffffd]" />
-          <div className="text-[#fffffd] lg:text-xl">VueJs</div>
-        </button>
-        {isVueVisible ? (
-          <div className="flex justify-center items-center mt-2">
-            <FaArrowUp className="text-accent" />
+      {frameworks.map(({ name, color, link, icon }, index) => (
+        selectedFramework === name && (
+          <div key={index} className="flex flex-col gap-4 mt-8 lg:mt-0 w-full lg:col-span-2 items-center">
+            <motion.div
+              key={`${index}-guide`}
+              className="flex flex-col items-center justify-center w-full max-w-2xl  rounded-md mx-auto"
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              variants={slideIn}
+              transition={{ duration: 0.7, ease: "easeInOut" }}
+            >
+              <Link href={link} className="group block w-full mb-8">
+                <div className={`relative flex items-center justify-center h-32 rounded-md shadow-lg overflow-hidden bg-gradient-to-r ${color}`}>
+                  <motion.div whileHover={{ scale: 1.1, x:30 }} transition={{ duration: 0.3 }} className="absolute inset-0 z-0 opacity-25">
+                    {icon}
+                  </motion.div>
+                  <h2 className="relative z-10 text-3xl text-white group-hover:text-accent transition duration-300">
+                    Tutoriels et Guides Pratiques<span className="text-accent group-hover:text-white">.</span>
+                  </h2>
+                </div>
+              </Link>
+            </motion.div>
+            <motion.div
+              key={`${index}-project`}
+              className="flex flex-col items-center justify-center w-full max-w-2xl rounded-md mx-auto"
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              variants={slideIn}
+              transition={{ duration: 0.7, ease: "easeInOut" }}
+            >
+              <Link href={link} className="group block w-full">
+                <div className={`relative flex items-center h-32 justify-center p-8 rounded-md shadow-lg overflow-hidden bg-gradient-to-r ${color}`}>
+                  <motion.div whileHover={{ scale: 1.1, x:30 }} transition={{ duration: 0.3 }} className="absolute inset-0 z-0 opacity-25">
+                    {icon}
+                  </motion.div>
+                  <h1 className="relative z-10 text-3xl text-white group-hover:text-accent transition duration-300">
+                    Projets et Etudes de cas<span className="text-accent group-hover:text-white">.</span>
+                  </h1>
+                </div>
+              </Link>
+            </motion.div>
           </div>
-        ) : null}
-      </div>
-
-      <div className="flex flex-col items-center">
-        <button 
-          className="h-14 w-12 lg:h-28 lg:w-24 flex flex-col items-center justify-center place-self-center rounded-full shadow-lg bg-red-500 hover:scale-110 border-[#fffffd] border-4 z-10 p-8 lg:p-0"
-          onClick={() => handleButtonClick('Angular')}>
-          <FaAngular className="lg:size-12 size-6 text-[#fffffd]" />
-          <div className="text-[#fffffd] lg:text-xl">Angular</div>
-        </button>
-        {isAngularVisible ? (
-          <div className="flex justify-center items-center mt-2">
-            <FaArrowUp className="text-accent" />
-          </div>
-        ) : null}
-      </div>
-
-      <div className="flex flex-col items-center">
-        <button 
-          className="h-14 w-12 lg:h-28 lg:w-24 flex flex-col items-center justify-center place-self-center rounded-full shadow-lg bg-black hover:scale-110 border-[#fffffd] border-4 z-10 p-8 lg:p-0"
-          onClick={() => handleButtonClick('Nextjs')}>
-          <SiNextdotjs className="lg:size-12 size-6 text-[#fffffd]" />
-          <div className="text-[#fffffd] lg:text-xl">NextJs</div>
-        </button>
-        {isNextjsVisible ? (
-          <div className="flex justify-center items-center mt-2">
-            <FaArrowUp className="text-accent" />
-          </div>
-        ) : null}
-      </div>
-
-      {isReactVisible && (
-        <motion.div 
-          className="flex flex-col items-center justify-center w-full"
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-          variants={slideIn}
-          transition={{ duration: 0.7, ease: "easeInOut" }}>
-          <div className="relative w-full xl:mt-0 lg:mt-0 mt-12 iph:mt-4 xxl:mt-20 sm:max-w-[75%] md:max-w-[60%] lg:max-w-[55%] xl:max-w-[50%] xxl:max-w-[70%] ">
-            <Link href="/blog/developpement/Js-framework/ReactTuto" 
-            className="group block">
-              <Image src={React_Banner} alt="Bannière React" width={width} height={height} className="object-cover bg-no-repeat z-0 group-hover:scale-110 rounded-md" />
-              <h2 className="left-8 xl:left-16 absolute top-[22%] -translate-y-[50%] xl:text-3xl group-hover:scale-110 group-hover:text-accent">Tutoriels et Guides Pratiques<span className="text-accent group-hover:text-white">.</span></h2>
-            </Link>
-            <div className="h-2 w-auto bg-slate-500"></div>
-            <Link href="/blog/developpement/Js-framework/ReactTuto" className="group block relative">
-              <Image src={React_Banner} alt="Bannière React" width={width} height={height} className="object-cover bg-no-repeat z-0 rotate-180 group-hover:scale-110 rounded-md" />
-              <h1 className="right-8 xl:right-28 absolute top-[50%] -translate-y-[50%] xl:text-3xl group-hover:scale-110 group-hover:text-accent">Projets et Etudes de cas<span className="text-accent group-hover:text-white">.</span></h1>
-            </Link>
-          </div>
-        </motion.div>
-      )}
+        )
+      ))}
     </div>
   );
 };
