@@ -37,7 +37,7 @@ const IntroductionToReact = () => {
   }, [inView]);
 
   return (
-    <div className="min-h-screen h-screen overflow-y-auto hide-scrollbar mt-16 text-white bg-gray-900">
+    <div className="min-h-screen h-screen overflow-y-auto hide-scrollbar text-white bg-gray-900">
       <Head>
         <title>Introduction à React | RomsDev</title>
         <meta name="description" content="Découvrez les bases de React, une bibliothèque JavaScript populaire pour la construction d'interfaces utilisateur." />
@@ -45,7 +45,7 @@ const IntroductionToReact = () => {
         <link rel="canonical" href="https://romsdev.fr/blog/developpement/Js-framework/React-Tuto/Demarrage-React" />
       </Head>
 
-      <div className="container mx-auto px-4 py-8 flex flex-col items-center">
+      <div className="container mx-auto px-4 py-8 flex flex-col items-center mt-16">
         <motion.h1
           className="h1 text-center"
           initial={{ opacity: 0, y: -50 }}
