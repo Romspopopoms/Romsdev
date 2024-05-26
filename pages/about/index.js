@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
 import Head from 'next/head';
 import Script from "next/script";
-// Data
+
 const aboutData = [
   {
     title: 'Mes connaissances',
@@ -28,7 +28,6 @@ const About = () => {
   const [index, setIndex] = useState(0);
   const contentRef = useRef(null);
 
-  // Utilisez useEffect pour détecter le changement de taille de la fenêtre et ajuster la hauteur de la div de contenu
   useEffect(() => {
     const handleResize = () => {
       if (contentRef.current) {
@@ -36,11 +35,9 @@ const About = () => {
       }
     };
 
-    // Appelez handleResize au chargement initial et à chaque changement de taille de fenêtre
     handleResize();
     window.addEventListener('resize', handleResize);
 
-    // Nettoyez l'écouteur d'événement lors du démontage du composant
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -63,19 +60,21 @@ const About = () => {
           gtag('config', 'G-17C5QX19CG');
         `}
       </Script>
-      <div className="h-full bg-primary/30 py-24 xl:py-40 text-center xl:text-left" ref={contentRef} style={{ overflowY: 'auto' }}>
+      <div className="h-full bg-primary/30 py-24 xl:py-40 text-center xl:text-left overflow-x-hidden hide-scrollbar" ref={contentRef}>
         <Circles />
         <motion.div
           variants={fadeIn('right', 0.2)}
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="hidden xl:flex absolute bottom-0 -left-[370px]"
+          className="hidden xl:flex absolute bottom-0 left-0"
         >
+          <div className="absolute bottom-32 left-0 -translate-x-[120%]">
           <Avatar />
+          </div>
         </motion.div>
-        <div className="container mx-auto h-full flex flex-col items-center mr-20 xl:flex-row gap-x-6">
-          <div className="flex-1 flex flex-col justify-center">
+        <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 overflow-y-auto hide-scrollbar">
+          <div className="flex-1 flex flex-col justify-center xl:pl-40">
             <motion.h2
               variants={fadeIn('right', 0.4)}
               initial="hidden"
@@ -94,7 +93,6 @@ const About = () => {
             >
               Développeur web autodidacte, mon portfolio met en avant mes compétences techniques à travers une sélection de projets. Chaque réalisation démontre mon approche rigoureuse et ma capacité à répondre aux besoins spécifiques, illustrant ainsi mon engagement envers l&apos;excellence et l&apos;innovation dans le développement web.
             </motion.p>
-            {/* Metrics */}
           </div>
           <motion.div
             variants={fadeIn('left', 0.6)}
@@ -116,13 +114,15 @@ const About = () => {
             </div>
             <div className="py-2 xl:py-6 flex flex-col gap-y-4 items-center xl:items-start">
               {aboutData[index].info.map((infoItem, infoIndex) => (
-                <div key={infoIndex} className="flex-1 flex md:flex-row max-w-max gap-x-2 gap-y-3 items-center text-white/60">
-                  <div className="font-light mb-2 md:mb-0 gap-2">{infoItem.title}</div>
-                  {infoItem.icons?.map(icon => (
-                    <div key={icon.key} className="text-2xl transition-all duration-500">
-                      {icon}
-                    </div>
-                  ))}
+                <div key={infoIndex} className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 gap-y-3 items-center text-white/60">
+                  <div className="font-light mb-2 md:mb-0">{infoItem.title}</div>
+                  <div className="flex gap-2">
+                    {infoItem.icons?.map(icon => (
+                      <div key={icon.key} className="text-2xl transition-all duration-500">
+                        {icon}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>

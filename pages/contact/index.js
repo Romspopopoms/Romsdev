@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Head from 'next/head';
 import Script from 'next/script';
-
+import Circles from '../../components/Circles';
+import Bulb from '../../components/Bulb';
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -50,7 +51,10 @@ const Contact = () => {
           gtag('config', 'G-17C5QX19CG');
         `}
       </Script>
+      
       <div className="container mx-auto mt-8 xl:mt-0 p-12 xl:p-40">
+      <Circles />
+
         <h2 className="text-4xl text-center font-bold mt-4">Contactez-moi <span className='text-accent'>!</span></h2>
         <form onSubmit={handleSubmit}>
           <div className="my-2 xl:my-8">
@@ -97,7 +101,8 @@ const Contact = () => {
           {submitStatus && <div className="text-center mt-4 text-lg">{submitStatus}</div>} {/* Affichage du statut d'envoi */}
         </form>
       </div>
-    </>
+      <Bulb />    
+      </>
   );
 };
 

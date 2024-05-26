@@ -30,7 +30,7 @@ const NavJsDev = () => {
   };
 
   return (
-    <div className="flex flex-wrap items-center justify-center gap-2 lg:gap-8 p-4">
+    <div className="flex flex-wrap items-center justify-center gap-2 md:gap-2 xxl:gap-16 p-4">
       <Link href="/blog/developpement"
         className="absolute top-20 xl:top-[20%] left-[90%] iph:left-[92%] md:left-[95%] lg:left-[96%] xl:left-[26%] h-auto w-full xl:w-auto bg-white/10 rounded-l-full xl:rounded-full p-2"
         onClick={() => setIsRedirected(!isRedirected)}>
@@ -101,7 +101,7 @@ const NavJsDev = () => {
           exit="exit"
           variants={slideIn}
           transition={{ duration: 0.7, ease: "easeInOut" }}>
-          <div className="relative w-full xl:mt-0 lg:mt-12 mt-12 xl:max-w-[50%] max-w-[100%] ">
+          <div className="relative w-full xl:mt-0 lg:mt-0 mt-12 iph:mt-4 xxl:mt-12 sm:max-w-[75%] md:max-w-[60%] lg:max-w-[55%] xl:max-w-[52%] xxl:max-w-[70%] ">
             <Link href="/blog/developpement/Js-framework/ReactTuto" 
             className="group block">
               <Image src={React_Banner} alt="Bannière React" width={width} height={height} className="object-cover bg-no-repeat z-0 group-hover:scale-110 rounded-md" />
