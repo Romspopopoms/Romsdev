@@ -101,7 +101,7 @@ const NavJsDev = () => {
           exit="exit"
           variants={slideIn}
           transition={{ duration: 0.7, ease: "easeInOut" }}>
-          <div className="relative w-full xl:mt-0 lg:mt-0 mt-12 iph:mt-4 xxl:mt-12 sm:max-w-[75%] md:max-w-[60%] lg:max-w-[55%] xl:max-w-[52%] xxl:max-w-[70%] ">
+          <div className="relative w-full xl:mt-0 lg:mt-0 mt-12 iph:mt-4 xxl:mt-20 sm:max-w-[75%] md:max-w-[60%] lg:max-w-[55%] xl:max-w-[50%] xxl:max-w-[70%] ">
             <Link href="/blog/developpement/Js-framework/ReactTuto" 
             className="group block">
               <Image src={React_Banner} alt="Bannière React" width={width} height={height} className="object-cover bg-no-repeat z-0 group-hover:scale-110 rounded-md" />

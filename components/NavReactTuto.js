@@ -4,7 +4,6 @@ import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa";
 import Banniere from "../public/BanniereTuto.png"
 import { FaReact } from "react-icons/fa"
-import React_Banner from "../public/React_Banner.png";
 
 const NavReactTuto = () => {
     return (
