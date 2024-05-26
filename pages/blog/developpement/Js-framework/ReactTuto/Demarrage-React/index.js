@@ -38,7 +38,7 @@ const QuickStartReact = () => {
   }, [inView]);
 
   return (
-    <div className="min-h-screen h-screen overflow-y-auto hide-scrollbar mt-16 text-white">
+    <div className="min-h-screen h-screen overflow-y-auto hide-scrollbar mt-16 text-white bg-gray-900">
       <Head>
         <title>Démarrage Rapide avec React | RomsDev</title>
         <meta name="description" content="Apprenez comment démarrer rapidement avec React, une bibliothèque JavaScript populaire pour la construction d'interfaces utilisateur." />

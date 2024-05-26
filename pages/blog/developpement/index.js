@@ -26,7 +26,7 @@ const Developpement = () => {
       }, []);
 
     return (
-        <div className="lg:mt-12 xl:mt-24 mt-24 flex flex-col items-center justify-center ">
+        <div className="lg:mt-12 xl:mt-24 mt-24 flex flex-col items-center justify-center bg-gray-900 ">
             <Navblog />
             <motion.h1 className="h1"
             initial={{scale: 0}}

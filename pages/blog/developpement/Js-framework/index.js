@@ -4,7 +4,7 @@ import Head from 'next/head';
 
 const JsFramework = () => {
   return (
-    <div className="sm:mt-20 mt-20 lg:mt-20 xl:mt-24 h-full w-full xxl:mt-32 hide-scrollbar" style={{ overflowY: 'auto' }}>
+    <div className="sm:mt-20 mt-20 lg:mt-20 xl:mt-24 h-full w-full xxl:mt-32 hide-scrollbar bg-gray-900" style={{ overflowY: 'auto' }}>
       <Head>
         <title>Frameworks JavaScript | RomsDev</title>
         <meta name="description" content="Découvrez les différents Framework JS, React, Vues, Angular et Next.js. Apprenez à coder et passez au niveau supérieur !" />

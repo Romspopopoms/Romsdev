@@ -37,7 +37,7 @@ const IntroductionToReact = () => {
   }, [inView]);
 
   return (
-    <div className="min-h-screen h-screen overflow-y-auto hide-scrollbar mt-16 text-white">
+    <div className="min-h-screen h-screen overflow-y-auto hide-scrollbar mt-16 text-white bg-gray-900">
       <Head>
         <title>Introduction à React | RomsDev</title>
         <meta name="description" content="Découvrez les bases de React, une bibliothèque JavaScript populaire pour la construction d'interfaces utilisateur." />
