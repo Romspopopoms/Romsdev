@@ -64,11 +64,11 @@ const NavJsDev = () => {
               transition={{ duration: 0.7, ease: "easeInOut" }}
             >
               <Link href={link} className="group block w-full mb-8">
-                <div className={`relative flex items-center justify-center h-32 rounded-md shadow-lg overflow-hidden bg-gradient-to-r ${color}`}>
+                <div className={`relative flex items-center justify-center h-32 rounded-md shadow-lg overflow-hidden bg-gradient-to-r ${color} border-2 hover:border-accent`}>
                   <motion.div whileHover={{ scale: 1.1, x:30 }} transition={{ duration: 0.3 }} className="absolute inset-0 z-0 opacity-25">
                     {icon}
                   </motion.div>
-                  <h2 className="relative z-10 text-3xl text-white group-hover:text-accent transition duration-300">
+                  <h2 className="relative z-10 lg:text-3xl text-2xl text-center text-white group-hover:text-accent transition duration-300">
                     Tutoriels et Guides Pratiques<span className="text-accent group-hover:text-white">.</span>
                   </h2>
                 </div>
@@ -84,11 +84,11 @@ const NavJsDev = () => {
               transition={{ duration: 0.7, ease: "easeInOut" }}
             >
               <Link href={link} className="group block w-full">
-                <div className={`relative flex items-center h-32 justify-center p-8 rounded-md shadow-lg overflow-hidden bg-gradient-to-r ${color}`}>
+                <div className={`relative flex items-center h-32 justify-center p-8 rounded-md shadow-lg overflow-hidden bg-gradient-to-r ${color} border-2 hover:border-accent`}>
                   <motion.div whileHover={{ scale: 1.1, x:30 }} transition={{ duration: 0.3 }} className="absolute inset-0 z-0 opacity-25">
                     {icon}
                   </motion.div>
-                  <h1 className="relative z-10 text-3xl text-white group-hover:text-accent transition duration-300">
+                  <h1 className="relative z-10 text-2xl lg:text-3xl text-white text-center group-hover:text-accent transition duration-300">
                     Projets et Etudes de cas<span className="text-accent group-hover:text-white">.</span>
                   </h1>
                 </div>

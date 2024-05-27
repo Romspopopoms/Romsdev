@@ -44,6 +44,9 @@ function MyApp({ Component, pageProps }) {
     }
   }, [pageProps.seo, defaultSeo]);
 
+  // Check if the current path is part of the blog section
+  const isBlogPath = router.pathname.startsWith('/blog');
+
   return (
     <Layout {...seo}>
       <Head>
@@ -63,9 +66,10 @@ function MyApp({ Component, pageProps }) {
         `}
       </Script>
       <AnimatePresence mode='wait'>
-        <div key={router.route} className='h-full'>
-          <Transition />
-          <Component {...pageProps} />
+        <div className={`h-full ${isBlogPath ? 'bg-gray-900' : ''}`}>
+          <Transition key={router.route}>
+            <Component {...pageProps} />
+          </Transition>
         </div>
       </AnimatePresence>
     </Layout>

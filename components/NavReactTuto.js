@@ -14,9 +14,6 @@ const NavReactTuto = () => {
         <link rel="canonical" href="https://www.votresite.com/blog/developpement/Js-framework/ReactTuto" />
       </Head>
 
-      <Link href="/blog/developpement" className="fixed top-20 left-4 lg:left-20 xl:top-24 bg-white/10 rounded-full p-2 z-30">
-        <FaArrowLeft className="text-2xl hover:text-accent" />
-      </Link>
 
       <div className="relative z-10 flex flex-col items-center w-full p-8">
         <h1 className="text-4xl lg:text-6xl font-bold text-center mb-6">Tutos et Guides React<span className="text-accent">.</span></h1>
@@ -31,7 +28,7 @@ const NavReactTuto = () => {
             { href: "/blog/developpement/Js-framework/ReactTuto/Les-Cycles-de-vie", title: "Les Cycles de Vie", gradient: "from-blue-800 to-blue-900", iconColor: "text-blue-100" },
           ].map((section, index) => (
             <Link key={index} href={section.href} className="relative flex items-center justify-center h-32 lg:h-40 w-4/5 lg:w-3/5 group">
-              <div className={`absolute inset-0 bg-gradient-to-r ${section.gradient} rounded-lg z-0 group-hover:scale-105 transition-transform duration-500`}></div>
+              <div className={`absolute inset-0 bg-gradient-to-r ${section.gradient} rounded-lg z-0 group-hover:scale-105 transition-transform duration-500 border-2 hover:border-accent`}></div>
               <div className="absolute flex justify-evenly w-full gap-16">
                 <FaReact className={`size-8 ${section.iconColor} group-hover:rotate-180 transition-transform duration-1000 ease-linear`} />
                 <FaReact className={`size-8 ${section.iconColor} group-hover:rotate-180 transition-transform duration-1000 ease-linear`} />

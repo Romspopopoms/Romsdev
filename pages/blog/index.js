@@ -101,30 +101,30 @@ const Blog = () => {
                     >
                         <h2 className="text-3xl font-semibold mb-4 flex items-center justify-center"><FaTags className="mr-2" /> Catégories</h2>
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8 z-30">
-                            {NavBlogData.map((item, index) => (
+                            {NavBlogData.filter((_, index) => index > 0).map((item, index) => (
                                 <motion.div
-                                    key={index}
+                                    key={index + 1} // Ajustement de l'index pour correspondre à l'index original de NavBlogData
                                     whileHover={{ scale: 1.05, backgroundColor: '#1f2937' }}
                                     transition={{ duration: 0.3 }}
-                                    className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300"
+                                    className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300 relative"
                                 >
-                                    <Link href={item.url} passHref>
+                                    <Link href={index + 1 === 1 ? item.url : "#"} passHref>
                                         <div className="flex flex-col cursor-pointer">
                                             <div className="flex justify-between items-center mb-4">
                                                 <h3 className="text-xl font-bold">{item.title}</h3>
-                                                {index === 0 && <SiJavascript className="text-2xl text-yellow-500" />}
-                                                {index === 1 && <FaNodeJs className="text-2xl text-green-500" />}
-                                                {index === 2 && <FaDocker className="text-2xl text-blue-500" />}
-                                                {index === 3 && <FaShieldAlt className="text-2xl text-red-500" />}
-                                                {index === 4 && <FaCloud className="text-2xl text-white" />}
-                                                {index === 5 && <FaBrain className="text-2xl text-purple-500" />}
-                                                {index === 6 && <FaPaintBrush className="text-2xl text-pink-500" />}
-                                                {index === 7 && <FaBriefcase className="text-2xl text-orange-500" />}
-                                                {index === 8 && <FaChartLine className="text-2xl text-teal-500" />}
+                                                {index + 1 === 1 && <SiJavascript className="text-2xl text-yellow-500" />}
+                                                {index + 1 === 2 && <FaNodeJs className="text-2xl text-green-500" />}
+                                                {index + 1 === 3 && <FaDocker className="text-2xl text-blue-500" />}
+                                                {index + 1 === 4 && <FaShieldAlt className="text-2xl text-red-500" />}
+                                                {index + 1 === 5 && <FaCloud className="text-2xl text-white" />}
+                                                {index + 1 === 6 && <FaBrain className="text-2xl text-purple-500" />}
+                                                {index + 1 === 7 && <FaPaintBrush className="text-2xl text-pink-500" />}
+                                                {index + 1 === 8 && <FaBriefcase className="text-2xl text-orange-500" />}
+                                                {index + 1 === 9 && <FaChartLine className="text-2xl text-teal-500" />}
                                             </div>
                                             <p className="text-gray-400 flex-grow">{item.description}</p>
                                             {item.subNav && (
-                                                <ul className="mt-4 text-center z-30">
+                                                <ul className="mt-4 text-center z-10">
                                                     {item.subNav.map((subItem, subIndex) => (
                                                         <Link key={subIndex} href={subItem.url} passHref>
                                                             <li className="text-blue-500 hover:underline">
@@ -136,8 +136,16 @@ const Blog = () => {
                                             )}
                                         </div>
                                     </Link>
+                                    {index + 1 !== 1 && (
+                                        <div className="absolute inset-0 flex items-center justify-center text-red-500 text-xl">
+                                            
+                                            <div className="text-white bg-accent rotate-45 h-12 w-30 text-center">🚧EN TRAVAUX!🚧</div>
+                                                
+                                      </div>
+                                    )}
                                 </motion.div>
                             ))}
+
                         </div>
                     </motion.section>
                 )}

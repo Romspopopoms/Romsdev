@@ -1,6 +1,9 @@
 
 const NavBlogData = [
-  
+  {
+    title: "Accueil",
+    url: "/blog"
+  },
   {
     title: "Dev'",
     description: "Articles sur les frameworks JavaScript, performance, accessibilité et responsive design.",

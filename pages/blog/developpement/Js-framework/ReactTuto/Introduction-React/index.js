@@ -6,6 +6,7 @@ import { FaReact } from 'react-icons/fa';
 import { AiOutlineCode, AiOutlineFileText, AiOutlineHighlight, AiOutlineFunction } from 'react-icons/ai';
 import { useInView } from 'react-intersection-observer';
 import { FaCodeBranch, FaCog } from 'react-icons/fa';
+import NavBlog from '../../../../../../components/NavBlog';
 
 const codeSnippet = `
 import React from 'react';
@@ -45,6 +46,7 @@ const IntroductionToReact = () => {
         <link rel="canonical" href="https://romsdev.fr/blog/developpement/Js-framework/React-Tuto/Demarrage-React" />
       </Head>
 
+      <NavBlog />
       <div className="container mx-auto px-4 py-8 flex flex-col items-center mt-16">
         <motion.h1
           className="h1 text-center"
