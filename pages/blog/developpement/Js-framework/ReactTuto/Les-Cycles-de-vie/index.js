@@ -237,7 +237,7 @@ export default FunctionalLifecycle;
               Navigation <span className="text-accent"><AiOutlineCode className="inline-block ml-2" /></span>
             </h2>
             <ul className="list-disc pl-5">
-              <li><Link href="/blog/developpement/Js-framework/ReactTuto/Gestion-Des-Etats" className="text-blue-500 hover:underline">Article Précédent : Gestion des États</Link></li>
+              <li><Link href="/blog/developpement/Js-framework/ReactTuto/Hooks" className="text-blue-500 hover:underline">Article Suivant : Les Hooks</Link></li>
               <li><Link href="/blog/developpement/Js-framework/ReactTuto" className="text-blue-500 hover:underline">Retour à la Section : Tutoriels de Base</Link></li>
             </ul>
           </div>

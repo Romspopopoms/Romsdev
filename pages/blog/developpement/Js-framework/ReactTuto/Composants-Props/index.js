@@ -231,7 +231,7 @@ export default ContactList;
               Navigation <span className="text-accent"><AiOutlineCode className="inline-block ml-2" /></span>
             </h2>
             <ul className="list-disc pl-5">
-              <li><Link href="/blog/developpement/Js-framework/ReactTuto/Demarrage-React" className="text-blue-500 hover:underline">Article Précédent : Démarrage Rapide avec React</Link></li>
+              <li><Link href="/blog/developpement/Js-framework/ReactTuto/Gestion-des-Etats" className="text-blue-500 hover:underline">Article Suivant : Gestion des États avec React</Link></li>
               <li><Link href="/blog/developpement/Js-framework/ReactTuto" className="text-blue-500 hover:underline">Retour à la Section : Tutoriels de Base</Link></li>
             </ul>
           </div>
