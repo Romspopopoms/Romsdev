@@ -26,11 +26,11 @@ export const navData = [
     path: '/contact',
     icon: <HiEnvelope />,
   },
-  // {
-  //   name: 'blog',
-  //   path: '/blog',
-  //   icon: <FaBlog />,
-  // }
+  {
+    name: 'blog',
+    path: '/blog',
+    icon: <FaBlog />,
+  }
 ];
 
 import Link from 'next/link';
