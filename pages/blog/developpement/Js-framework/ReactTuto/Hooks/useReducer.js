@@ -217,7 +217,7 @@ export default TaskManager;
               Navigation <span className="text-accent"><AiOutlineCode className="inline-block ml-2" /></span>
             </h2>
             <ul className="list-disc pl-5">
-              <li><Link href="/blog/developpement/Js-framework/ReactTuto/Hooks/useContext" className="text-blue-500 hover:underline">Article Précédent : useContext</Link></li>
+              <li><Link href="/blog/developpement/Js-framework/ReactTuto/Hooks/useCallback" className="text-blue-500 hover:underline">Article Suivant : useCallback</Link></li>
               <li><Link href="/blog/developpement/Js-framework/ReactTuto" className="text-blue-500 hover:underline">Retour à la Section : Tutoriels de Base</Link></li>
             </ul>
           </div>

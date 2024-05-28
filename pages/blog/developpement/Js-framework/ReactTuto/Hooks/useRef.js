@@ -177,7 +177,7 @@ export default Timer;
               Navigation <span className="text-accent"><AiOutlineCode className="inline-block ml-2" /></span>
             </h2>
             <ul className="list-disc pl-5">
-              <li><Link href="/blog/developpement/Js-framework/ReactTuto/Hooks/useMemo" className="text-blue-500 hover:underline">Article Précédent : useMemo</Link></li>
+              <li><Link href="/blog/developpement/Js-framework/ReactTuto/Hooks/useImperativehandle" className="text-blue-500 hover:underline">Article Suivant : useImperativehandle</Link></li>
               <li><Link href="/blog/developpement/Js-framework/ReactTuto" className="text-blue-500 hover:underline">Retour à la Section : Tutoriels de Base</Link></li>
             </ul>
           </div>

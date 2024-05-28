@@ -134,7 +134,7 @@ export default UseLayoutEffectExample;
               Navigation <span className="text-accent"><AiOutlineCode className="inline-block ml-2" /></span>
             </h2>
             <ul className="list-disc pl-5">
-              <li><Link href="/blog/developpement/Js-framework/ReactTuto/Hooks/useImperativeHandle" className="text-blue-500 hover:underline">Article Précédent : useImperativeHandle</Link></li>
+              <li><Link href="/blog/developpement/Js-framework/ReactProjets" className="text-blue-500 hover:underline">Section Suivante : ReactProjets </Link></li>
               <li><Link href="/blog/developpement/Js-framework/ReactTuto" className="text-blue-500 hover:underline">Retour à la Section : Tutoriels de Base</Link></li>
             </ul>
           </div>
