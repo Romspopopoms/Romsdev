@@ -171,6 +171,11 @@ const QuickStartReact = () => {
               <p className="text-center">
                 Familiarisez-vous avec la structure des fichiers et commencez à modifier votre application React.
               </p>
+              <p className="text-center mt-2">
+                Pour en savoir plus sur les bases de React, consultez nos articles sur 
+                <Link href="/blog/developpement/Js-framework/ReactTuto/Composants-Props" className="text-blue-500 underline ml-1">les Composants et les Props</Link> et 
+                <Link href="/blog/developpement/Js-framework/ReactTuto/Gestion-des-Etats" className="text-blue-500 underline ml-1">la Gestion des États</Link>.
+              </p>
             </div>
           </motion.div>
         </motion.section>
@@ -181,7 +186,7 @@ const QuickStartReact = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-                      <h2 className="text-2xl font-semibold mb-4 text-center">
+          <h2 className="text-2xl font-semibold mb-4 text-center">
             Exemple de Code <span className="text-accent"><AiOutlineFileText className="inline-block ml-2" /></span>
           </h2>
           <motion.pre
@@ -210,6 +215,10 @@ const QuickStartReact = () => {
           <p className="text-lg lg:text-xl">
             Maintenant que vous avez installé React et créé votre première application, vous êtes prêt à explorer les nombreuses fonctionnalités de cette bibliothèque puissante. Suivez nos prochains tutoriels pour approfondir vos connaissances et maîtriser React.
           </p>
+          <p className="text-lg lg:text-xl mt-4">
+            Pour plus de ressources et de guides détaillés, consultez notre section sur 
+            <Link href="/blog/developpement/Js-framework/ReactTuto/Hooks" className="text-blue-500 underline ml-1">les Hooks</Link>.
+          </p>
         </motion.section>
 
         <motion.section
@@ -235,6 +244,9 @@ const QuickStartReact = () => {
             <ul className="list-disc pl-5 lg:mx-8">
               <li><Link href="/blog/developpement/Js-framework/ReactTuto/Gestion-Des-Etats" className="text-blue-500 hover:underline">Gestion des États avec React</Link></li>
               <li><Link href="/blog/developpement/Js-framework/ReactTuto/Les-Cycles-de-vie" className="text-blue-500 hover:underline">Les Cycles de Vie</Link></li>
+              <li><Link href="/blog/developpement/Js-framework/ReactTuto/Hooks/useState" className="text-blue-500 hover:underline">Hook useState</Link></li>
+              <li><Link href="/blog/developpement/Js-framework/ReactTuto/Hooks/useEffect" className="text-blue-500 hover:underline">Hook useEffect</Link></li>
+              <li><Link href="/blog/developpement/Js-framework/ReactTuto/Hooks/useContext" className="text-blue-500 hover:underline">Hook useContext</Link></li>
             </ul>
           </div>
         </motion.section>

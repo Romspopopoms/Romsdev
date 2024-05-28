@@ -158,6 +158,7 @@ export default FunctionalLifecycle;
             Les composants de classe en React ont des méthodes de cycle de vie intégrées que vous pouvez utiliser pour exécuter du code à des moments spécifiques du cycle de vie d&apos;un composant.
           </p>
           <div className="bg-gray-600 p-6 rounded-lg mb-8">
+            <h3 className="text-xl font-medium mb-2">Exemple de Cycle de Vie des Composants de Classe</h3>
             <motion.pre
               className="bg-gray-500 p-4 rounded overflow-x-auto"
               initial={{ opacity: 0 }}
@@ -179,6 +180,10 @@ export default FunctionalLifecycle;
             <li><code>componentDidUpdate</code> : Réagir aux changements de props ou d&apos;état.</li><br></br>
             <li><code>componentWillUnmount</code> : Nettoyage avant que le composant soit détruit.</li>
           </ul>
+          <p className="text-lg lg:text-xl text-center mt-4">
+            Pour plus de détails sur les composants de classe, visitez notre 
+            <Link href="/blog/developpement/Js-framework/ReactTuto/Composants-Props" className="text-blue-500 underline ml-1">page dédiée aux Composants et Props</Link>.
+          </p>
         </motion.section>
 
         <motion.section
@@ -194,6 +199,7 @@ export default FunctionalLifecycle;
             Les hooks, introduits dans React 16.8, permettent de gérer les cycles de vie dans les composants fonctionnels. Le hook <code>useEffect</code> remplace les méthodes de cycle de vie des composants de classe.
           </p>
           <div className="bg-gray-600 p-6 rounded-lg mb-8">
+            <h3 className="text-xl font-medium mb-2">Exemple de Cycle de Vie avec useEffect</h3>
             <motion.pre
               className="bg-gray-500 p-4 rounded overflow-x-auto"
               initial={{ opacity: 0 }}
@@ -214,6 +220,10 @@ export default FunctionalLifecycle;
             <li>Le second argument est un tableau de dépendances. Si ce tableau est vide, l&apos;effet s&apos;exécute une seule fois après le premier rendu.</li><br></br>
             <li>La fonction de retour de <code>useEffect</code> s&apos;exécute lors du démontage du composant (similaire à <code>componentWillUnmount</code>).</li>
           </ul>
+          <p className="text-lg lg:text-xl text-center mt-4">
+            Pour plus de détails sur l&apos;utilisation de useEffect, visitez notre 
+            <Link href="/blog/developpement/Js-framework/ReactTuto/Hooks/useEffect" className="text-blue-500 underline ml-1">page dédiée au hook useEffect</Link>.
+          </p>
         </motion.section>
 
         <motion.section
@@ -239,6 +249,10 @@ export default FunctionalLifecycle;
             <ul className="list-disc pl-5 lg:mx-8">
               <li><Link href="/blog/developpement/Js-framework/ReactTuto/Composants-Props" className="text-blue-500 hover:underline">Composants et Props</Link></li>
               <li><Link href="/blog/developpement/Js-framework/ReactTuto/Demarrage-React" className="text-blue-500 hover:underline">Démarrage Rapide avec React</Link></li>
+              <li><Link href="/blog/developpement/Js-framework/ReactTuto/Hooks" className="text-blue-500 hover:underline">Hooks en React</Link></li>
+              <li><Link href="/blog/developpement/Js-framework/ReactTuto/Hooks/useState" className="text-blue-500 hover:underline">Hook useState</Link></li>
+              <li><Link href="/blog/developpement/Js-framework/ReactTuto/Hooks/useEffect" className="text-blue-500 hover:underline">Hook useEffect</Link></li>
+              <li><Link href="/blog/developpement/Js-framework/ReactTuto/Hooks/useReducer" className="text-blue-500 hover:underline">Hook useReducer</Link></li>
             </ul>
           </div>
         </motion.section>

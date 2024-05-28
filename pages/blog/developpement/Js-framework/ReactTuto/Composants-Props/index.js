@@ -138,6 +138,10 @@ export default ContactList;
           <p className="text-lg lg:text-xl text-center">
             Dans cet article, nous allons explorer les concepts fondamentaux des composants et des props en React. Les composants sont les éléments de base de toute application React, tandis que les props permettent de passer des données et de configurer ces composants.
           </p>
+          <p className="text-lg lg:text-xl text-center mt-4">
+            Pour en savoir plus sur les différents types de composants, consultez notre article sur 
+            <Link href="/blog/developpement/Js-framework/ReactTuto/Les-Cycles-de-vie" className="text-blue-500 underline ml-1">les Cycles de Vie des Composants</Link>.
+          </p>
         </motion.section>
 
         <motion.section
@@ -210,6 +214,10 @@ export default ContactList;
           <p className="text-lg lg:text-xl text-center">
             Dans cet exemple, le composant <code>Welcome</code> reçoit une prop <code>name</code> et affiche un message de bienvenue avec cette prop.
           </p>
+          <p className="text-lg lg:text-xl text-center mt-4">
+            Pour plus d&apos;informations sur l&apos;utilisation des props, consultez notre article sur 
+            <Link href="/blog/developpement/Js-framework/ReactTuto/Hooks" className="text-blue-500 underline ml-1">les Hooks en React</Link>.
+          </p>
         </motion.section>
 
         <motion.section
@@ -235,6 +243,9 @@ export default ContactList;
             <ul className="list-disc pl-5 lg:mx-8">
               <li><Link href="/blog/developpement/Js-framework/ReactTuto/Gestion-Des-Etats" className="text-blue-500 hover:underline">Gestion des États avec React</Link></li>
               <li><Link href="/blog/developpement/Js-framework/ReactTuto/Les-Cycles-de-vie" className="text-blue-500 hover:underline">Les Cycles de Vie</Link></li>
+              <li><Link href="/blog/developpement/Js-framework/ReactTuto/Hooks" className="text-blue-500 hover:underline">Hooks en React</Link></li>
+              <li><Link href="/blog/developpement/Js-framework/ReactTuto/Hooks/useState" className="text-blue-500 hover:underline">Hook useState</Link></li>
+              <li><Link href="/blog/developpement/Js-framework/ReactTuto/Hooks/useEffect" className="text-blue-500 hover:underline">Hook useEffect</Link></li>
             </ul>
           </div>
         </motion.section>

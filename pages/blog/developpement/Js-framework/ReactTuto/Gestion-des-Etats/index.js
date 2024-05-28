@@ -163,6 +163,10 @@ export default CounterClass;
           <p className="text-lg lg:text-xl text-center">
             Dans cet article, nous allons découvrir les différentes façons de gérer les états en React. Nous allons examiner les hooks <code>useState</code> et <code>useReducer</code>, ainsi que les composants de classe.
           </p>
+          <p className="text-lg lg:text-xl text-center mt-4">
+            Pour plus de détails sur les hooks et leur utilisation, consultez notre 
+            <Link href="/blog/developpement/Js-framework/ReactTuto/Hooks" className="text-blue-500 underline ml-1">page dédiée aux Hooks React</Link>.
+          </p>
         </motion.section>
 
         <motion.section
@@ -179,6 +183,7 @@ export default CounterClass;
           </p>
 
           <div className="bg-gray-600 p-4 rounded-lg mb-4 mt-4">
+            <h3 className="text-xl font-medium mb-2">Exemple de useState</h3>
             <motion.pre
               className="bg-gray-500 p-4 rounded overflow-x-auto"
               initial={{ opacity: 0 }}
@@ -190,6 +195,10 @@ export default CounterClass;
               <code>{typedCode1}</code>
             </motion.pre>
           </div>
+          <p className="text-lg lg:text-xl text-center mt-4">
+            Pour une explication plus détaillée sur le hook useState, visitez notre 
+            <Link href="/blog/developpement/Js-framework/ReactTuto/Hooks/useState" className="text-blue-500 underline ml-1">page dédiée au hook useState</Link>.
+          </p>
         </motion.section>
 
         <motion.section
@@ -205,6 +214,7 @@ export default CounterClass;
             Le hook <code>useReducer</code> est utile pour des états plus complexes et une logique de mise à jour.
           </p>
           <div className="bg-gray-600 p-4 rounded-lg mb-4 mt-4">
+            <h3 className="text-xl font-medium mb-2">Exemple de useReducer</h3>
             <motion.pre
               className="bg-gray-500 p-4 rounded overflow-x-auto"
               initial={{ opacity: 0 }}
@@ -216,6 +226,10 @@ export default CounterClass;
               <code>{typedCode2}</code>
             </motion.pre>
           </div>
+          <p className="text-lg lg:text-xl text-center mt-4">
+            Pour plus d&apos;informations sur l&apos;utilisation de useReducer, consultez notre 
+            <Link href="/blog/developpement/Js-framework/ReactTuto/Hooks/useReducer" className="text-blue-500 underline ml-1">page dédiée au hook useReducer</Link>.
+          </p>
         </motion.section>
 
         <motion.section
@@ -228,9 +242,10 @@ export default CounterClass;
             Gestion des États avec les Composants de Classe <span className="text-accent"><AiOutlineFunction className="inline-block ml-2" /></span>
           </h2>
           <p className="text-lg lg:text-xl text-center">
-            Les composants de classe utilisent <code>this.state</code> pour gérer l`&apos;état local.
+            Les composants de classe utilisent <code>this.state</code> pour gérer l&apos;état local.
           </p>
           <div className="bg-gray-600 p-4 rounded-lg mb-4 mt-4">
+            <h3 className="text-xl font-medium mb-2">Exemple avec des Composants de Classe</h3>
             <motion.pre
               className="bg-gray-500 p-4 rounded overflow-x-auto"
               initial={{ opacity: 0 }}
@@ -242,6 +257,10 @@ export default CounterClass;
               <code>{typedCode3}</code>
             </motion.pre>
           </div>
+          <p className="text-lg lg:text-xl text-center mt-4">
+            Pour une explication plus détaillée sur la gestion des états avec les composants de classe, visitez notre 
+            <Link href="/blog/developpement/Js-framework/ReactTuto/Hooks" className="text-blue-500 underline ml-1">page dédiée aux Hooks React</Link>.
+          </p>
         </motion.section>
 
         <motion.section
@@ -267,6 +286,10 @@ export default CounterClass;
             <ul className="list-disc pl-5 lg:mx-8">
               <li><Link href="/blog/developpement/Js-framework/ReactTuto/Gestion-Des-Etats" className="text-blue-500 hover:underline">Gestion des États avec React</Link></li>
               <li><Link href="/blog/developpement/Js-framework/ReactTuto/Les-Cycles-de-vie" className="text-blue-500 hover:underline">Les Cycles de Vie</Link></li>
+              <li><Link href="/blog/developpement/Js-framework/ReactTuto/Hooks" className="text-blue-500 hover:underline">Hooks en React</Link></li>
+              <li><Link href="/blog/developpement/Js-framework/ReactTuto/Hooks/useState" className="text-blue-500 hover:underline">Hook useState</Link></li>
+              <li><Link href="/blog/developpement/Js-framework/ReactTuto/Hooks/useEffect" className="text-blue-500 hover:underline">Hook useEffect</Link></li>
+              <li><Link href="/blog/developpement/Js-framework/ReactTuto/Hooks/useReducer" className="text-blue-500 hover:underline">Hook useReducer</Link></li>
             </ul>
           </div>
         </motion.section>
