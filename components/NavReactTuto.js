@@ -26,6 +26,8 @@ const NavReactTuto = () => {
             { href: "/blog/developpement/Js-framework/ReactTuto/Composants-Props", title: "Composants et Props", gradient: "from-blue-600 to-blue-800", iconColor: "text-blue-100" },
             { href: "/blog/developpement/Js-framework/ReactTuto/Gestion-des-Etats", title: "Gestion des États", gradient: "from-blue-700 to-blue-900", iconColor: "text-blue-100" },
             { href: "/blog/developpement/Js-framework/ReactTuto/Les-Cycles-de-vie", title: "Les Cycles de Vie", gradient: "from-blue-800 to-blue-900", iconColor: "text-blue-100" },
+            { href: "/blog/developpement/Js-framework/ReactTuto/Hooks", title: "Les Hooks", gradient: "from-blue-800 to-blue-900", iconColor: "text-blue-200" },
+
           ].map((section, index) => (
             <Link key={index} href={section.href} className="relative flex items-center justify-center h-32 lg:h-40 w-4/5 lg:w-3/5 group">
               <div className={`absolute inset-0 bg-gradient-to-r ${section.gradient} rounded-lg z-0 group-hover:scale-105 transition-transform duration-500 border-2 hover:border-accent`}></div>
