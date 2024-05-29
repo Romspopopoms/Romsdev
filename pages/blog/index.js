@@ -138,9 +138,7 @@ const Blog = () => {
                                     </Link>
                                     {index + 1 !== 1 && (
                                         <div className="absolute inset-0 flex items-center justify-center text-red-500 text-xl">
-                                            
                                             <div className="text-white bg-accent rotate-45 h-12 w-30 text-center">🚧EN TRAVAUX!🚧</div>
-                                                
                                       </div>
                                     )}
                                 </motion.div>
