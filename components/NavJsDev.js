@@ -8,10 +8,34 @@ const NavJsDev = () => {
   const [selectedFramework, setSelectedFramework] = useState('React');
 
   const frameworks = [
-    { name: 'React', color: 'from-blue-500 to-blue-300', icon: <FaReact size={40} />, link: '/blog/developpement/Js-framework/ReactTuto' },
-    { name: 'Vue', color: 'from-green-500 to-green-300', icon: <FaVuejs size={40} />, link: '/blog/developpement/Js-framework/VueTuto' },
-    { name: 'Angular', color: 'from-red-500 to-red-300', icon: <FaAngular size={40} />, link: '/blog/developpement/Js-framework/AngularTuto' },
-    { name: 'Nextjs', color: 'from-gray-800 to-gray-600', icon: <SiNextdotjs size={40} />, link: '/blog/developpement/Js-framework/NextjsTuto' },
+    { 
+      name: 'React', 
+      color: 'from-blue-500 to-blue-300', 
+      icon: <FaReact size={40} />, 
+      guideLink: '/blog/developpement/Js-framework/ReactTuto', 
+      projectLink: '/blog/developpement/Js-framework/ReactProjects' 
+    },
+    { 
+      name: 'Vue', 
+      color: 'from-green-500 to-green-300', 
+      icon: <FaVuejs size={40} />, 
+      guideLink: '/blog/developpement/Js-framework/VueTuto', 
+      projectLink: '/blog/developpement/Js-framework/VueProjects' 
+    },
+    { 
+      name: 'Angular', 
+      color: 'from-red-500 to-red-300', 
+      icon: <FaAngular size={40} />, 
+      guideLink: '/blog/developpement/Js-framework/AngularTuto', 
+      projectLink: '/blog/developpement/Js-framework/AngularProjects' 
+    },
+    { 
+      name: 'Nextjs', 
+      color: 'from-gray-800 to-gray-600', 
+      icon: <SiNextdotjs size={40} />, 
+      guideLink: '/blog/developpement/Js-framework/NextjsTuto', 
+      projectLink: '/blog/developpement/Js-framework/NextjsProjects' 
+    },
   ];
 
   const handleButtonClick = (framework) => {
@@ -51,7 +75,7 @@ const NavJsDev = () => {
         ))}
       </div>
 
-      {frameworks.map(({ name, color, link, icon }, index) => (
+      {frameworks.map(({ name, color, guideLink, projectLink, icon }, index) => (
         selectedFramework === name && (
           <div key={index} className="flex flex-col gap-4 mt-8 lg:mt-0 w-full lg:col-span-2 items-center">
             <motion.div
@@ -63,9 +87,9 @@ const NavJsDev = () => {
               variants={slideIn}
               transition={{ duration: 0.7, ease: "easeInOut" }}
             >
-              <Link href={link} className="group block w-full mb-8">
+              <Link href={guideLink} className="group block w-full mb-8">
                 <div className={`relative flex items-center justify-center h-32 rounded-md shadow-lg overflow-hidden bg-gradient-to-r ${color} border-2 hover:border-accent`}>
-                  <motion.div whileHover={{ scale: 1.1, x:30 }} transition={{ duration: 0.3 }} className="absolute inset-0 z-0 opacity-25">
+                  <motion.div whileHover={{ scale: 1.1, x: 30 }} transition={{ duration: 0.3 }} className="absolute inset-0 z-0 opacity-25">
                     {icon}
                   </motion.div>
                   <h2 className="relative z-10 lg:text-3xl text-2xl text-center text-white group-hover:text-accent transition duration-300">
@@ -83,9 +107,9 @@ const NavJsDev = () => {
               variants={slideIn}
               transition={{ duration: 0.7, ease: "easeInOut" }}
             >
-              <Link href={link} className="group block w-full">
+              <Link href={projectLink} className="group block w-full">
                 <div className={`relative flex items-center h-32 justify-center p-8 rounded-md shadow-lg overflow-hidden bg-gradient-to-r ${color} border-2 hover:border-accent`}>
-                  <motion.div whileHover={{ scale: 1.1, x:30 }} transition={{ duration: 0.3 }} className="absolute inset-0 z-0 opacity-25">
+                  <motion.div whileHover={{ scale: 1.1, x: 30 }} transition={{ duration: 0.3 }} className="absolute inset-0 z-0 opacity-25">
                     {icon}
                   </motion.div>
                   <h1 className="relative z-10 text-2xl lg:text-3xl text-white text-center group-hover:text-accent transition duration-300">
