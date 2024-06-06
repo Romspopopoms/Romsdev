@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import NavBlog from "../../../../components/NavBlog";
+import NavBlog from "../../../../../components/NavBlog";
 import NavAngularTuto from "../../../../../components/NavAngularTuto";
 
 const AngularTuto = () => {
