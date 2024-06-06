@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import NavBlog from "../../../../components/NavBlog";
-import NavVueTuto from "../../../../components/NavVueTuto";
+import NavBlog from "../../../../../components/NavBlog";
+import NavVueTuto from "../../../../../components/NavVueTuto";
 
 const VueTuto = () => {
   return (
