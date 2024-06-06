@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import NavBlog from "../../../../components/NavBlog";
-import NavNextjsTuto from "../../../../components/NavNextjsTuto";
+import NavBlog from "../../../../../components/NavBlog";
+import NavNextjsTuto from "../../../../../components/NavNextjsTuto";
 
 const NextjsTuto = () => {
   return (
