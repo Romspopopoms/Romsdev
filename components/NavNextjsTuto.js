@@ -24,10 +24,10 @@ const NavNextjsTuto = () => {
             { href: "/blog/developpement/Js-framework/NextjsTuto/Introduction-Nextjs", title: "Introduction à Next.js", gradient: "from-gray-800 to-gray-600", iconColor: "text-gray-400" },
             { href: "/blog/developpement/Js-framework/NextjsTuto/Installation-Nextjs", title: "Installation et Configuration", gradient: "from-gray-700 to-gray-500", iconColor: "text-gray-300" },
             { href: "/blog/developpement/Js-framework/NextjsTuto/Pages-Routing", title: "Pages et Routing", gradient: "from-gray-600 to-gray-400", iconColor: "text-gray-200" },
-            { href: "/blog/developpement/Js-framework/NextjsTuto/Static-Dynamic-Rendering", title: "Rendu Statique et Dynamique", gradient: "from-gray-500 to-gray-300", iconColor: "text-gray-100" },
-            { href: "/blog/developpement/Js-framework/NextjsTuto/API-Routes", title: "Routes API", gradient: "from-gray-400 to-gray-200", iconColor: "text-gray-100" },
-            { href: "/blog/developpement/Js-framework/NextjsTuto/Styling", title: "Styling et CSS", gradient: "from-gray-300 to-gray-100", iconColor: "text-gray-100" },
-            { href: "/blog/developpement/Js-framework/NextjsTuto/Deployement", title: "Déploiement", gradient: "from-gray-200 to-gray-100", iconColor: "text-gray-100" },
+            { href: "/blog/developpement/Js-framework/NextjsTuto/Static-Dynamic-Rendering", title: "Rendu Statique et Dynamique", gradient: "from-gray-600 to-gray-400", iconColor: "text-gray-100" },
+            { href: "/blog/developpement/Js-framework/NextjsTuto/API-Routes", title: "Routes API", gradient: "from-gray-600 to-gray-400", iconColor: "text-gray-100" },
+            { href: "/blog/developpement/Js-framework/NextjsTuto/Styling", title: "Styling et CSS", gradient: "from-gray-600 to-gray-400", iconColor: "text-gray-100" },
+            { href: "/blog/developpement/Js-framework/NextjsTuto/Deployement", title: "Déploiement", gradient: "from-gray-600 to-gray-400", iconColor: "text-gray-100" },
           ].map((section, index) => (
             <Link key={index} href={section.href} className="relative flex items-center justify-center h-32 lg:h-40 w-4/5 lg:w-3/5 group">
               <div className={`absolute inset-0 bg-gradient-to-r ${section.gradient} rounded-lg z-0 group-hover:scale-105 transition-transform duration-500 border-2 hover:border-accent`}></div>
