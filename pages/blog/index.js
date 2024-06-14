@@ -94,7 +94,7 @@ const Blog = () => {
                                     transition={{ duration: 0.3 }}
                                     className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300 flex flex-col items-start cursor-pointer"
                                 >
-                                    <SiNextdotjs className="text-4xl text-blue-500 mb-4" />
+                                    <SiNextdotjs className="text-4xl text-black mb-4" />
                                     <h3 className="text-2xl font-bold mb-2">Pages et Routing avec Next.js</h3>
                                     <p className="text-gray-400 flex-grow">Apprenez comment gérer les pages et le routing avec Next.js.</p>
                                     <FaArrowRight className="text-gray-400 self-end hover:text-accent" />
@@ -142,7 +142,7 @@ const Blog = () => {
                                     transition={{ duration: 0.3 }}
                                     className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300 flex flex-col items-start cursor-pointer"
                                 >
-                                    <SiNextdotjs className="text-4xl text-blue-500 mb-4" />
+                                    <SiNextdotjs className="text-4xl text-black mb-4" />
                                     <h3 className="text-2xl font-bold mb-2">Rendu Statique et Dynamique avec Next.js</h3>
                                     <p className="text-gray-400 flex-grow">Découvrez comment utiliser le rendu statique et dynamique avec Next.js.</p>
                                     <FaArrowRight className="text-gray-400 self-end hover:text-accent" />
@@ -178,7 +178,7 @@ const Blog = () => {
                                     transition={{ duration: 0.3 }}
                                     className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300 flex flex-col items-start cursor-pointer"
                                 >
-                                    <SiNextdotjs className="text-4xl text-blue-500 mb-4" />
+                                    <SiNextdotjs className="text-4xl text-black mb-4" />
                                     <h3 className="text-2xl font-bold mb-2">Styling dans Next.js</h3>
                                     <p className="text-gray-400 flex-grow">Découvrez comment styliser vos applications Next.js.</p>
                                     <FaArrowRight className="text-gray-400 self-end hover:text-accent" />
@@ -202,7 +202,7 @@ const Blog = () => {
                                     transition={{ duration: 0.3 }}
                                     className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300 flex flex-col items-start cursor-pointer"
                                 >
-                                    <SiNextdotjs className="text-4xl text-blue-500 mb-4" />
+                                    <SiNextdotjs className="text-4xl text-black mb-4" />
                                     <h3 className="text-2xl font-bold mb-2">Déploiement de votre Application Next.js</h3>
                                     <p className="text-gray-400 flex-grow">Apprenez comment déployer votre application Next.js en ligne.</p>
                                     <FaArrowRight className="text-gray-400 self-end hover:text-accent" />
