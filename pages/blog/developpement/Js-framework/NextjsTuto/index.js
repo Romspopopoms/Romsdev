@@ -5,7 +5,7 @@ import NavNextjsTuto from "../../../../../components/NavNextjsTuto";
 
 const NextjsTuto = () => {
   return (
-    <div className="h-screen w-full hide-scrollbar bg-gray-900" style={{ overflowY: 'auto' }}>
+    <div className="h-screen w-full hide-scrollbar" style={{ overflowY: 'auto' }}>
       <Head>
         <title>Tutoriels Next.js | RomsDev</title>
         <meta name="description" content="Découvrez des tutoriels et des guides sur Next.js pour améliorer vos compétences en développement web." />
