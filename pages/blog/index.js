@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FaSearch, FaFire, FaTags, FaArrowRight, FaReact, FaVuejs, FaAngular, FaNodeJs, FaDocker, FaShieldAlt, FaCloud, FaBrain, FaPaintBrush, FaBriefcase, FaChartLine } from "react-icons/fa";
+import { SiNextdotjs } from 'react-icons/si';
 import Head from "next/head";
 import { motion } from "framer-motion";
 import NavBlogData from "../../components/NavBlogData";
@@ -93,21 +94,21 @@ const Blog = () => {
                                     transition={{ duration: 0.3 }}
                                     className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300 flex flex-col items-start cursor-pointer"
                                 >
-                                    <FaReact className="text-4xl text-blue-500 mb-4" />
+                                    <SiNextdotjs className="text-4xl text-blue-500 mb-4" />
                                     <h3 className="text-2xl font-bold mb-2">Pages et Routing avec Next.js</h3>
                                     <p className="text-gray-400 flex-grow">Apprenez comment gérer les pages et le routing avec Next.js.</p>
                                     <FaArrowRight className="text-gray-400 self-end hover:text-accent" />
                                 </motion.div>
                             </Link>
-                            <Link href="/blog/developpement/Js-framework/VueTuto/Demarrage-Vue" passHref>
+                            <Link href="/blog/developpement/Js-framework/VueTuto/Installation-Vue" passHref>
                                 <motion.div
                                     whileHover={{ scale: 1.05, backgroundColor: '#1f2937' }}
                                     transition={{ duration: 0.3 }}
                                     className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300 flex flex-col items-start cursor-pointer"
                                 >
                                     <FaVuejs className="text-4xl text-green-500 mb-4" />
-                                    <h3 className="text-2xl font-bold mb-2">Démarrage Rapide avec Vue.js</h3>
-                                    <p className="text-gray-400 flex-grow">Découvrez comment démarrer rapidement avec Vue.js.</p>
+                                    <h3 className="text-2xl font-bold mb-2">Installation Vue.js</h3>
+                                    <p className="text-gray-400 flex-grow">Découvrez comment installer rapidement Vue.js.</p>
                                     <FaArrowRight className="text-gray-400 self-end hover:text-accent" />
                                 </motion.div>
                             </Link>
@@ -141,7 +142,7 @@ const Blog = () => {
                                     transition={{ duration: 0.3 }}
                                     className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300 flex flex-col items-start cursor-pointer"
                                 >
-                                    <FaReact className="text-4xl text-blue-500 mb-4" />
+                                    <SiNextdotjs className="text-4xl text-blue-500 mb-4" />
                                     <h3 className="text-2xl font-bold mb-2">Rendu Statique et Dynamique avec Next.js</h3>
                                     <p className="text-gray-400 flex-grow">Découvrez comment utiliser le rendu statique et dynamique avec Next.js.</p>
                                     <FaArrowRight className="text-gray-400 self-end hover:text-accent" />
@@ -177,13 +178,13 @@ const Blog = () => {
                                     transition={{ duration: 0.3 }}
                                     className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300 flex flex-col items-start cursor-pointer"
                                 >
-                                    <FaReact className="text-4xl text-blue-500 mb-4" />
+                                    <SiNextdotjs className="text-4xl text-blue-500 mb-4" />
                                     <h3 className="text-2xl font-bold mb-2">Styling dans Next.js</h3>
                                     <p className="text-gray-400 flex-grow">Découvrez comment styliser vos applications Next.js.</p>
                                     <FaArrowRight className="text-gray-400 self-end hover:text-accent" />
                                 </motion.div>
                             </Link>
-                            <Link href="/blog/developpement/Js-framework/VueProjects/Calendar" passHref>
+                            <Link href="/blog/developpement/Js-framework/VueProjects/calendar" passHref>
                                 <motion.div
                                     whileHover={{ scale: 1.05, backgroundColor: '#1f2937' }}
                                     transition={{ duration: 0.3 }}
@@ -201,7 +202,7 @@ const Blog = () => {
                                     transition={{ duration: 0.3 }}
                                     className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300 flex flex-col items-start cursor-pointer"
                                 >
-                                    <FaReact className="text-4xl text-blue-500 mb-4" />
+                                    <SiNextdotjs className="text-4xl text-blue-500 mb-4" />
                                     <h3 className="text-2xl font-bold mb-2">Déploiement de votre Application Next.js</h3>
                                     <p className="text-gray-400 flex-grow">Apprenez comment déployer votre application Next.js en ligne.</p>
                                     <FaArrowRight className="text-gray-400 self-end hover:text-accent" />
