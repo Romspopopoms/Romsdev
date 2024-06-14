@@ -12,7 +12,7 @@ const NavNextjsTuto = () => {
         <meta name="description" content="Découvrez les bases de Next.js avec ces tutoriels détaillés, conçus pour vous guider pas à pas." />
         <meta name="keywords" content="Next.js, tutoriels, guides, développement web" />
         <meta name="author" content="Votre Nom" />
-        <link rel="canonical" href="https://www.votresite.com/blog/developpement/Js-framework/NextjsTuto" />
+        <link rel="canonical" href="https://www.Romsdev.fr/blog/developpement/Js-framework/NextjsTuto" />
       </Head>
 
       <div className="relative z-10 flex flex-col items-center w-full p-8">
