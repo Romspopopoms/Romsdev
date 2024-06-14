@@ -34,7 +34,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="min-h-screen h-screen overflow-y-auto text-white bg-gray-900 hide-scrollbar">
+    <div className="min-h-screen h-screen overflow-y-auto text-white  hide-scrollbar">
       <Head>
         <title>Projets Pas à Pas | RomsDev</title>
         <meta name="description" content="Suivez nos guides pas à pas pour réaliser des projets simples avec Next.js." />
