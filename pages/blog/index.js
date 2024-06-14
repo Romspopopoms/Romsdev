@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaSearch, FaFire, FaTags, FaArrowRight, FaReact, FaNodeJs, FaDocker, FaShieldAlt, FaCloud, FaBrain, FaPaintBrush, FaBriefcase, FaChartLine } from "react-icons/fa";
+import { FaSearch, FaFire, FaTags, FaArrowRight, FaReact, FaVuejs, FaAngular, FaNodeJs, FaDocker, FaShieldAlt, FaCloud, FaBrain, FaPaintBrush, FaBriefcase, FaChartLine } from "react-icons/fa";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import NavBlogData from "../../components/NavBlogData";
@@ -75,6 +75,42 @@ const Blog = () => {
                                     <FaArrowRight className="text-gray-400 self-end hover:text-accent" />
                                 </motion.div>
                             </Link>
+                            <Link href="/blog/developpement/Js-framework/AngularTuto/Installation-Angular" passHref>
+                                <motion.div
+                                    whileHover={{ scale: 1.05, backgroundColor: '#1f2937' }}
+                                    transition={{ duration: 0.3 }}
+                                    className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300 flex flex-col items-start cursor-pointer"
+                                >
+                                    <FaAngular className="text-4xl text-red-500 mb-4" />
+                                    <h3 className="text-2xl font-bold mb-2">Installation et Configuration d&apos;Angular</h3>
+                                    <p className="text-gray-400 flex-grow">Apprenez à installer et configurer Angular pour démarrer vos projets de développement web.</p>
+                                    <FaArrowRight className="text-gray-400 self-end hover:text-accent" />
+                                </motion.div>
+                            </Link>
+                            <Link href="/blog/developpement/Js-framework/NextjsTuto/Pages-Routing" passHref>
+                                <motion.div
+                                    whileHover={{ scale: 1.05, backgroundColor: '#1f2937' }}
+                                    transition={{ duration: 0.3 }}
+                                    className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300 flex flex-col items-start cursor-pointer"
+                                >
+                                    <FaReact className="text-4xl text-blue-500 mb-4" />
+                                    <h3 className="text-2xl font-bold mb-2">Pages et Routing avec Next.js</h3>
+                                    <p className="text-gray-400 flex-grow">Apprenez comment gérer les pages et le routing avec Next.js.</p>
+                                    <FaArrowRight className="text-gray-400 self-end hover:text-accent" />
+                                </motion.div>
+                            </Link>
+                            <Link href="/blog/developpement/Js-framework/VueTuto/Demarrage-Vue" passHref>
+                                <motion.div
+                                    whileHover={{ scale: 1.05, backgroundColor: '#1f2937' }}
+                                    transition={{ duration: 0.3 }}
+                                    className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300 flex flex-col items-start cursor-pointer"
+                                >
+                                    <FaVuejs className="text-4xl text-green-500 mb-4" />
+                                    <h3 className="text-2xl font-bold mb-2">Démarrage Rapide avec Vue.js</h3>
+                                    <p className="text-gray-400 flex-grow">Découvrez comment démarrer rapidement avec Vue.js.</p>
+                                    <FaArrowRight className="text-gray-400 self-end hover:text-accent" />
+                                </motion.div>
+                            </Link>
                             <Link href="/blog/developpement/Js-framework/ReactTuto/Demarrage-React" passHref>
                                 <motion.div
                                     whileHover={{ scale: 1.05, backgroundColor: '#1f2937' }}
@@ -87,7 +123,90 @@ const Blog = () => {
                                     <FaArrowRight className="text-gray-400 self-end hover:text-accent" />
                                 </motion.div>
                             </Link>
-                            {/* Ajoutez d'autres articles ici */}
+                            <Link href="/blog/developpement/Js-framework/AngularProjects/portfolio" passHref>
+                                <motion.div
+                                    whileHover={{ scale: 1.05, backgroundColor: '#1f2937' }}
+                                    transition={{ duration: 0.3 }}
+                                    className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300 flex flex-col items-start cursor-pointer"
+                                >
+                                    <FaAngular className="text-4xl text-red-500 mb-4" />
+                                    <h3 className="text-2xl font-bold mb-2">Créer un Portfolio avec Angular</h3>
+                                    <p className="text-gray-400 flex-grow">Suivez ce guide pas à pas pour créer votre propre site portfolio en utilisant Angular.</p>
+                                    <FaArrowRight className="text-gray-400 self-end hover:text-accent" />
+                                </motion.div>
+                            </Link>
+                            <Link href="/blog/developpement/Js-framework/NextjsTuto/Static-Dynamic-Rendering" passHref>
+                                <motion.div
+                                    whileHover={{ scale: 1.05, backgroundColor: '#1f2937' }}
+                                    transition={{ duration: 0.3 }}
+                                    className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300 flex flex-col items-start cursor-pointer"
+                                >
+                                    <FaReact className="text-4xl text-blue-500 mb-4" />
+                                    <h3 className="text-2xl font-bold mb-2">Rendu Statique et Dynamique avec Next.js</h3>
+                                    <p className="text-gray-400 flex-grow">Découvrez comment utiliser le rendu statique et dynamique avec Next.js.</p>
+                                    <FaArrowRight className="text-gray-400 self-end hover:text-accent" />
+                                </motion.div>
+                            </Link>
+                            <Link href="/blog/developpement/Js-framework/VueTuto/Introduction-Vue" passHref>
+                                <motion.div
+                                    whileHover={{ scale: 1.05, backgroundColor: '#1f2937' }}
+                                    transition={{ duration: 0.3 }}
+                                    className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300 flex flex-col items-start cursor-pointer"
+                                >
+                                    <FaVuejs className="text-4xl text-green-500 mb-4" />
+                                    <h3 className="text-2xl font-bold mb-2">Introduction à Vue.js</h3>
+                                    <p className="text-gray-400 flex-grow">Découvrez les bases de Vue.js avec ce tutoriel détaillé.</p>
+                                    <FaArrowRight className="text-gray-400 self-end hover:text-accent" />
+                                </motion.div>
+                            </Link>
+                            <Link href="/blog/developpement/Js-framework/AngularProjects/todo-list" passHref>
+                                <motion.div
+                                    whileHover={{ scale: 1.05, backgroundColor: '#1f2937' }}
+                                    transition={{ duration: 0.3 }}
+                                    className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300 flex flex-col items-start cursor-pointer"
+                                >
+                                    <FaAngular className="text-4xl text-red-500 mb-4" />
+                                    <h3 className="text-2xl font-bold mb-2">Créer une Todo List avec Angular</h3>
+                                    <p className="text-gray-400 flex-grow">Suivez ce guide pour créer une application de gestion de tâches avec Angular.</p>
+                                    <FaArrowRight className="text-gray-400 self-end hover:text-accent" />
+                                </motion.div>
+                            </Link>
+                            <Link href="/blog/developpement/Js-framework/NextjsTuto/Styling" passHref>
+                                <motion.div
+                                    whileHover={{ scale: 1.05, backgroundColor: '#1f2937' }}
+                                    transition={{ duration: 0.3 }}
+                                    className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300 flex flex-col items-start cursor-pointer"
+                                >
+                                    <FaReact className="text-4xl text-blue-500 mb-4" />
+                                    <h3 className="text-2xl font-bold mb-2">Styling dans Next.js</h3>
+                                    <p className="text-gray-400 flex-grow">Découvrez comment styliser vos applications Next.js.</p>
+                                    <FaArrowRight className="text-gray-400 self-end hover:text-accent" />
+                                </motion.div>
+                            </Link>
+                            <Link href="/blog/developpement/Js-framework/VueProjects/Calendar" passHref>
+                                <motion.div
+                                    whileHover={{ scale: 1.05, backgroundColor: '#1f2937' }}
+                                    transition={{ duration: 0.3 }}
+                                    className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300 flex flex-col items-start cursor-pointer"
+                                >
+                                    <FaVuejs className="text-4xl text-green-500 mb-4" />
+                                    <h3 className="text-2xl font-bold mb-2">Créer un Calendrier avec Vue.js</h3>
+                                    <p className="text-gray-400 flex-grow">Suivez ce guide pour créer une application de calendrier avec Vue.js.</p>
+                                    <FaArrowRight className="text-gray-400 self-end hover:text-accent" />
+                                </motion.div>
+                            </Link>
+                            <Link href="/blog/developpement/Js-framework/NextjsTuto/Deployement" passHref>
+                                <motion.div
+                                    whileHover={{ scale: 1.05, backgroundColor: '#1f2937' }}
+                                    transition={{ duration: 0.3 }}
+                                    className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300 flex flex-col items-start cursor-pointer"
+                                >
+                                    <FaReact className="text-4xl text-blue-500 mb-4" />
+                                    <h3 className="text-2xl font-bold mb-2">Déploiement de votre Application Next.js</h3>
+                                    <p className="text-gray-400 flex-grow">Apprenez comment déployer votre application Next.js en ligne.</p>
+                                    <FaArrowRight className="text-gray-400 self-end hover:text-accent" />
+                                </motion.div>
+                            </Link>
                         </div>
                     </motion.section>
                 )}

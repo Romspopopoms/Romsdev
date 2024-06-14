@@ -11,7 +11,7 @@ const NavReactTuto = () => {
         <meta name="description" content="Découvrez les bases de React avec ces tutoriels détaillés, conçus pour vous guider pas à pas." />
         <meta name="keywords" content="React, tutoriels, guides, développement web" />
         <meta name="author" content="Votre Nom" />
-        <link rel="canonical" href="https://www.votresite.com/blog/developpement/Js-framework/ReactTuto" />
+        <link rel="canonical" href="https://www.Romsdev.fr/blog/developpement/Js-framework/ReactTuto" />
       </Head>
 
 
