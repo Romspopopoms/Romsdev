@@ -191,7 +191,7 @@ ul {
   }, [inView6, codeSnippet6]);
 
   return (
-    <div className="min-h-screen h-screen overflow-y-auto text-white bg-gray-900 hide-scrollbar">
+    <div className="min-h-screen h-screen overflow-y-auto text-white  hide-scrollbar">
       <Head>
         <title>Créer un Portfolio avec Next.js | RomsDev</title>
         <meta name="description" content="Suivez ce guide pas à pas pour créer votre propre site portfolio en utilisant Next.js." />

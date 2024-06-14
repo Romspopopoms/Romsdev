@@ -224,7 +224,7 @@ li {
   }, [inView6, codeSnippet6]);
 
   return (
-    <div className="min-h-screen h-screen overflow-y-auto text-white bg-gray-900 hide-scrollbar">
+    <div className="min-h-screen h-screen overflow-y-auto text-white  hide-scrollbar">
       <Head>
         <title>Créer une Todo List avec Next.js | RomsDev</title>
         <meta name="description" content="Suivez ce guide pas à pas pour créer votre propre application Todo List en utilisant Next.js." />

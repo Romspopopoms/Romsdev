@@ -6,7 +6,7 @@ import Head from "next/head";
 
 const NavNextjsTuto = () => {
   return (
-    <div className="relative flex flex-col items-center w-full min-h-screen text-white bg-black">
+    <div className="relative flex flex-col items-center w-full min-h-screen text-white ">
       <Head>
         <title>Tutos et Guides Next.js | Blog Développement</title>
         <meta name="description" content="Découvrez les bases de Next.js avec ces tutoriels détaillés, conçus pour vous guider pas à pas." />
