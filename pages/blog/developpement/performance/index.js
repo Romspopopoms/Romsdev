@@ -2,7 +2,7 @@ import React from "react";
 import { FaTachometerAlt, FaRocket, FaTools, FaChartLine, FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
 import Head from "next/head";
-import Navblog from "../../../components/NavBlog";
+import Navblog from "../../../../components/NavBlog";
 import { motion } from "framer-motion";
 
 const Performance = () => {
