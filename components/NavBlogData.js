@@ -10,7 +10,7 @@ const NavBlogData = [
     url: "/blog/developpement",
     subNav: [
       { title: "Frameworks JS", url: "/blog/developpement/Js-framework" },
-      { title: "Performance", url: "/blog/developpement/performance" },
+      { title: "Performance", url: "/blog/developpement/performance/optimisation" },
       { title: "Accessibilité", url: "/blog/developpement/accessibilite" },
       { title: "Responsive", url: "/blog/developpement/responsive-design" }
     ]
