@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { FaUniversalAccess, FaA11y, FaWheelchair, FaEye, FaArrowUp } from "react-icons/fa";
+import { FaUniversalAccess, FaWheelchair, FaEye, FaArrowUp } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { FaAccessibleIcon } from 'react-icons/fa';
 import Link from "next/link";
 
 const NavAccess = () => {
@@ -18,7 +19,7 @@ const NavAccess = () => {
     {
       name: "WCAG",
       color: "from-green-400 to-green-600",
-      icon: <FaA11y size={40} />,
+      icon: <FaAccessibleIcon size={40} />,
       subSections: [
         { title: "Les WCAG", link: "/blog/developpement/accessibilite/wcag" },
       ],
