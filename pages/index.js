@@ -5,6 +5,7 @@ import Avatar from '../components/Avatar';
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import Head from 'next/head';
+import Avis from "../components/Avis";
 
 const Home = () => {
   const contentRef = useRef(null);
@@ -84,6 +85,7 @@ const Home = () => {
             <div className="w-full h-48"></div>
           </motion.div>
         </div>
+        <Avis />
       </div>
     </>
   );
